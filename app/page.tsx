@@ -1,19 +1,52 @@
-import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+    <main className="flex flex-col items-center gap-5 p-8">
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>Presidente</CardTitle>
+        </CardHeader>
+        <CardContent>
+          
+        </CardContent>
+      </Card>
+      <Card className="w-full">
+        <CardHeader>
+          <CardTitle>Governador</CardTitle>
+        </CardHeader>
+      </Card>
+      <div className="w-full flex items-center gap-5">
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle>Deputado Federal</CardTitle>
+          </CardHeader>
+        </Card>
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle>Deputado Estadual</CardTitle>
+          </CardHeader>
+        </Card>
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle>Senador</CardTitle>
+          </CardHeader>
+        </Card>
       </div>
-    </div>
+    </main>
   )
+}
+
+type CandidateProps = {
+  id: string;
+  imgPath: string;
+  name: string;
+  party: string;
+  votes: number;
+}
+
+function Candidate({}: CandidateProps) {
+  return (
+    <></>
+  );
 }
