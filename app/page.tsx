@@ -8,20 +8,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import {
-  Map,
-  MapMarker,
-  MarkerContent,
-  MarkerTooltip,
-} from "@/components/ui/map"
+import { votationLocations } from "@/lib/data/votation-location"
 import {
   Progress,
   ProgressLabel,
   ProgressValue,
 } from "@/components/ui/progress"
 import { type Candidate, candidates } from "@/lib/data/candidate"
-import { votationLocations } from "@/lib/data/votation-location"
 import Image from "next/image"
+import { CustomMap } from "@/components/map-component"
 
 type Office = {
   title: string;
@@ -86,30 +81,7 @@ export default function Page() {
         </section>
 
         <section className="w-full" aria-label="Locais de votação">
-          <Card>
-            <CardHeader>
-              <CardTitle>Locais de votação</CardTitle>
-              <CardDescription>
-                Distribuição dos locais de votação no mapa
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="h-[70vh] min-h-80 overflow-hidden px-2">
-              <Map center={[-34.8990014, -7.1069417]} zoom={11}>
-                {votationLocations.map((location) => (
-                  <MapMarker
-                    key={location.id}
-                    longitude={location.longitude}
-                    latitude={location.latitude}
-                  >
-                    <MarkerContent>
-                      <div className="size-4 rounded-full border-2 border-white bg-primary shadow-lg" />
-                    </MarkerContent>
-                    <MarkerTooltip>{location.localVotacao}</MarkerTooltip>
-                  </MapMarker>
-                ))}
-              </Map>
-            </CardContent>
-          </Card>
+          <CustomMap votationLocations={votationLocations} />
         </section>
       </main>
     </>
