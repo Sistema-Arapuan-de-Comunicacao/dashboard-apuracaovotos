@@ -21,80 +21,104 @@ import {
 } from "@/components/ui/progress"
 import { type Candidate, candidates } from "@/lib/data/candidate"
 import { votationLocations } from "@/lib/data/votation-location"
+import Image from "next/image"
 
-const offices = [
-  { title: "Presidente", candidates: candidates.slice(0, 3) },
-  { title: "Governador", candidates: candidates.slice(0, 3) },
-  { title: "Deputado Federal", candidates: candidates.slice(0, 3) },
-  { title: "Deputado Estadual", candidates: candidates.slice(0, 3) },
-  { title: "Senador", candidates: candidates.slice(0, 3) },
+type Office = {
+  title: string;
+  candidates: Candidate[];
+  size: "lg" | "sm";
+}
+
+const offices: Office[] = [
+  { title: "Presidente", candidates: candidates.slice(0, 3), size: "lg" },
+  { title: "Governador", candidates: candidates.slice(0, 3), size: "lg" },
+  { title: "Deputado Federal", candidates: candidates.slice(0, 5), size: "sm" },
+  { title: "Deputado Estadual", candidates: candidates.slice(0, 5), size: "sm" },
+  { title: "Senador", candidates: candidates.slice(0, 5), size: "sm" },
 ]
 
 export default function Page() {
-  const chartCandidateNames = candidates
-    .slice(0, 3)
-    .map((candidate) => candidate.nomeUrnaCandidato) as [string, string, string]
-
   return (
-    <main className="flex flex-col gap-6 p-4 sm:p-6 lg:p-8">
-      <section
-        className="grid w-full gap-5 md:grid-cols-2 xl:grid-cols-6"
-        aria-label="Resultados por cargo"
+    <>
+      <header
+        className="flex min-h-28 w-full items-center justify-center bg-cover px-4 py-6"
+        style={{
+          backgroundImage: "url('/FUNDO2K_BandEleicoes2026.png')",
+          backgroundPosition: "center 85%",
+        }}
       >
-        {offices.map((office, index) => (
-          <Card
-            key={office.title}
-            className={index < 2 ? "xl:col-span-3" : "xl:col-span-2"}
-          >
+        <Image
+          src="/LOGO 2026.png"
+          alt="Arapuan Eleições 2026"
+          width={372}
+          height={155}
+          preload
+          unoptimized
+          className="h-auto w-40 sm:w-52"
+        />
+      </header>
+
+      <main className="flex flex-col gap-6 p-4 sm:p-6 lg:p-8">
+        <section
+          className="grid w-full gap-5 md:grid-cols-2 xl:grid-cols-6"
+          aria-label="Resultados por cargo"
+        >
+          {offices.map((office, index) => (
+            <Card
+              key={office.title}
+              className={index < 2 ? "xl:col-span-3" : "xl:col-span-2"}
+            >
+              <CardHeader>
+                <CardTitle>{office.title}</CardTitle>
+                <CardDescription>Resultados parciais</CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-col gap-2.5">
+                {office.candidates.map((candidate) => (
+                  <CandidateCard key={candidate.id} candidate={candidate} size={office.size} />
+                ))}
+              </CardContent>
+            </Card>
+          ))}
+        </section>
+
+        <section className="w-full" aria-label="Gráficos da apuração">
+          <ElectionCharts />
+        </section>
+
+        <section className="w-full" aria-label="Locais de votação">
+          <Card>
             <CardHeader>
-              <CardTitle>{office.title}</CardTitle>
-              <CardDescription>Resultados parciais</CardDescription>
+              <CardTitle>Locais de votação</CardTitle>
+              <CardDescription>
+                Distribuição dos locais de votação no mapa
+              </CardDescription>
             </CardHeader>
-            <CardContent className="flex flex-col gap-2.5">
-              {office.candidates.map((candidate) => (
-                <CandidateCard key={candidate.id} candidate={candidate} />
-              ))}
+            <CardContent className="h-[70vh] min-h-80 overflow-hidden px-2">
+              <Map center={[-34.8990014, -7.1069417]} zoom={11}>
+                {votationLocations.map((location) => (
+                  <MapMarker
+                    key={location.id}
+                    longitude={location.longitude}
+                    latitude={location.latitude}
+                  >
+                    <MarkerContent>
+                      <div className="size-4 rounded-full border-2 border-white bg-primary shadow-lg" />
+                    </MarkerContent>
+                    <MarkerTooltip>{location.localVotacao}</MarkerTooltip>
+                  </MapMarker>
+                ))}
+              </Map>
             </CardContent>
           </Card>
-        ))}
-      </section>
-
-      <section className="w-full" aria-label="Gráficos da apuração">
-        <ElectionCharts candidateNames={chartCandidateNames} />
-      </section>
-
-      <section className="w-full" aria-label="Locais de votação">
-        <Card>
-          <CardHeader>
-            <CardTitle>Locais de votação</CardTitle>
-            <CardDescription>
-              Distribuição dos locais de votação no mapa
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="h-[70vh] min-h-80 overflow-hidden px-2">
-            <Map center={[-34.8990014, -7.1069417]} zoom={11}>
-              {votationLocations.map((location) => (
-                <MapMarker
-                  key={location.id}
-                  longitude={location.longitude}
-                  latitude={location.latitude}
-                >
-                  <MarkerContent>
-                    <div className="size-4 rounded-full border-2 border-white bg-primary shadow-lg" />
-                  </MarkerContent>
-                  <MarkerTooltip>{location.localVotacao}</MarkerTooltip>
-                </MapMarker>
-              ))}
-            </Map>
-          </CardContent>
-        </Card>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   )
 }
 
 type CandidateCardProps = {
-  candidate: Candidate
+  candidate: Candidate;
+  size: "lg" | "sm";
 }
 
 function CandidateCard({
