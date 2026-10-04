@@ -193,6 +193,7 @@ export function ElectionCharts({ votes, isLoading }: ElectionChartsProps) {
                   key={candidateKey}
                   dataKey={candidateKey}
                   fill={`var(--color-${candidateKey})`}
+                  minPointSize={3}
                   radius={4}
                   shape={CenteredBar}
                 />

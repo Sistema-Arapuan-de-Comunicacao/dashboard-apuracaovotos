@@ -39,8 +39,42 @@ const offices: OfficeConfig[] = [
 ]
 
 const numberFormatter = new Intl.NumberFormat("pt-BR")
+const candidateById = new Map(
+  candidateCatalog.map((candidate) => [candidate.id, candidate])
+)
 const candidatePhotoById = new Map(
   candidateCatalog.map((candidate) => [candidate.id, candidate.pathName])
+)
+
+const emptyRankingCandidateIds: Record<string, number[]> = {
+  "1": [422, 421, 420],
+  "3": [33, 138, 203],
+  "5": [251, 360, 35, 139],
+  "6": [144, 364, 206, 294, 198],
+  "7": [386, 166, 68, 57, 233],
+}
+
+const emptyRankingVotes = offices.flatMap((office) =>
+  emptyRankingCandidateIds[office.code].map((candidateId, index) => {
+    const candidate = candidateById.get(candidateId)
+
+    if (!candidate) {
+      throw new Error(`Candidato ${candidateId} não encontrado no catálogo.`)
+    }
+
+    return {
+      candidato_id: candidate.id,
+      nome_candidato: candidate.nomeCandidato,
+      nome_urna_candidato: candidate.nomeUrnaCandidato,
+      nome_partido: candidate.nomePartido,
+      numero_candidato: String(candidate.numeroCandidato),
+      codigo_cargo: office.code,
+      nome_cargo: office.title,
+      total_votos: 0,
+      total_votos_cargo: 0,
+      posicao: index + 1,
+    } satisfies RankingVote
+  })
 )
 
 export default function Page() {
@@ -52,6 +86,10 @@ export default function Page() {
   })
 
   const votes = votesQuery.data ?? []
+  const displayedVotes =
+    !votesQuery.isPending && !votesQuery.isError && votes.length === 0
+      ? emptyRankingVotes
+      : votes
 
   return (
     <>
@@ -91,7 +129,7 @@ export default function Page() {
             </Card>
           ) : (
             offices.map((office, index) => {
-              const candidates = votes
+              const candidates = displayedVotes
                 .filter((vote) => vote.codigo_cargo === office.code)
                 .slice(0, office.limit)
 
@@ -134,7 +172,10 @@ export default function Page() {
 
         {(!votesQuery.isError || votes.length > 0) && (
           <section className="w-full" aria-label="Gráficos da apuração">
-            <ElectionCharts votes={votes} isLoading={votesQuery.isPending} />
+            <ElectionCharts
+              votes={displayedVotes}
+              isLoading={votesQuery.isPending}
+            />
           </section>
         )}
 
