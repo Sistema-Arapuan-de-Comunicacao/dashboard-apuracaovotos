@@ -3,7 +3,6 @@
 import Image from "next/image"
 import { useQuery } from "@tanstack/react-query"
 
-import { AnimatedRanking } from "@/components/animated-ranking"
 import { ElectionCharts } from "@/components/election-charts"
 import { CustomMap } from "@/components/map-component"
 import {
@@ -147,24 +146,17 @@ export default function Page() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-col gap-2.5">
-                    {votesQuery.isPending ? (
-                      Array.from({ length: office.limit }, (_, position) => (
-                        <CandidateCardSkeleton key={position} />
-                      ))
-                    ) : (
-                      <AnimatedRanking
-                        items={candidates}
-                        getKey={(candidate) => candidate.candidato_id}
-                        label={`Ranking para ${office.title}`}
-                        className="flex flex-col gap-2.5"
-                        renderItem={(candidate) => (
+                    {votesQuery.isPending
+                      ? Array.from({ length: office.limit }, (_, position) => (
+                          <CandidateCardSkeleton key={position} />
+                        ))
+                      : candidates.map((candidate) => (
                           <CandidateCard
+                            key={candidate.candidato_id}
                             candidate={candidate}
                             size={office.size}
                           />
-                        )}
-                      />
-                    )}
+                        ))}
 
                     {!votesQuery.isPending && candidates.length === 0 && (
                       <p className="py-4 text-sm text-muted-foreground">
@@ -236,7 +228,7 @@ function CandidateCard({ candidate, size }: CandidateCardProps) {
               alt={`Foto de ${candidate.nome_urna_candidato}`}
               fill
               sizes="44px"
-              className="object-cover object-center"
+              className="object-cover object-top"
             />
           )}
         </div>
