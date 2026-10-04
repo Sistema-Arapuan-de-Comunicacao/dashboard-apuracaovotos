@@ -1,6 +1,14 @@
 "use client"
 
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts"
+import {
+  Bar,
+  BarChart,
+  type BarShapeProps,
+  CartesianGrid,
+  Rectangle,
+  XAxis,
+  YAxis,
+} from "recharts"
 
 import {
   Card,
@@ -29,6 +37,14 @@ const officeLabels: Record<string, string> = {
   "7": "Dep. Estadual",
 }
 
+const officeLimits: Record<string, number> = {
+  "1": 3,
+  "3": 3,
+  "5": 4,
+  "6": 5,
+  "7": 5,
+}
+
 const chartConfig = {
   candidato1: { label: "1º colocado", color: "var(--chart-1)" },
   candidato2: { label: "2º colocado", color: "var(--chart-2)" },
@@ -44,6 +60,7 @@ const compactNumberFormatter = new Intl.NumberFormat("pt-BR", {
 
 type ChartRow = {
   cargo: string
+  codigoCargo: string
   [key: string]: string | number
 }
 
@@ -52,14 +69,27 @@ type ElectionChartsProps = {
   isLoading?: boolean
 }
 
+const barGap = 4
+
+function CenteredBar({ payload, width, x, ...props }: BarShapeProps) {
+  const shouldCenter =
+    payload?.codigoCargo === "1" || payload?.codigoCargo === "3"
+  const centeredX = shouldCenter ? x + width + barGap : x
+
+  return <Rectangle {...props} x={centeredX} width={width} />
+}
+
 export function ElectionCharts({ votes, isLoading }: ElectionChartsProps) {
   const chartData = officeOrder.map((officeCode) => {
     const row: ChartRow = {
       cargo: officeLabels[officeCode],
+      codigoCargo: officeCode,
     }
 
     for (const vote of votes.filter(
-      (item) => item.codigo_cargo === officeCode && item.posicao <= 5
+      (item) =>
+        item.codigo_cargo === officeCode &&
+        item.posicao <= officeLimits[officeCode],
     )) {
       row[`candidato${vote.posicao}`] = vote.total_votos
     }
@@ -74,7 +104,7 @@ export function ElectionCharts({ votes, isLoading }: ElectionChartsProps) {
         <CardDescription>
           {isLoading
             ? "Carregando votos do banco de dados…"
-            : "Comparativo dos cinco candidatos mais votados em cada cargo"}
+            : "Comparativo dos candidatos mais votados em cada cargo"}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -86,6 +116,7 @@ export function ElectionCharts({ votes, isLoading }: ElectionChartsProps) {
           <BarChart
             accessibilityLayer
             data={chartData}
+            barGap={barGap}
             margin={{ left: 0, right: 12 }}
           >
             <CartesianGrid vertical={false} />
@@ -127,6 +158,7 @@ export function ElectionCharts({ votes, isLoading }: ElectionChartsProps) {
                 dataKey={candidateKey}
                 fill={`var(--color-${candidateKey})`}
                 radius={4}
+                shape={CenteredBar}
               />
             ))}
           </BarChart>

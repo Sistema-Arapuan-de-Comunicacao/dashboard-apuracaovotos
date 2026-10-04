@@ -6,6 +6,7 @@ export type Candidate = {
   nomeUrnaCandidato: string
   cargo: string
   cargoId: number
+  pathName: string
 }
 
 export const candidates: Candidate[] = [
@@ -17,6 +18,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CORONEL ALIXANDRE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553966_div.jpg",
   },
   {
     id: 2,
@@ -26,6 +28,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NEIDE BICUDA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553390_div.jpg",
   },
   {
     id: 3,
@@ -35,6 +38,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "VALDECIR JUNIOR",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553396_div.jpg",
   },
   {
     id: 4,
@@ -44,6 +48,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CRISTIANO MATEUS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553391_div.jpg",
   },
   {
     id: 5,
@@ -53,6 +58,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CRISTINA DE JOÃO BODIN",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553393_div.jpg",
   },
   {
     id: 6,
@@ -62,6 +68,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO ETIVALDO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553963_div.jpg",
   },
   {
     id: 7,
@@ -71,6 +78,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RODOLFO DUARTE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553397_div.jpg",
   },
   {
     id: 8,
@@ -80,6 +88,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ZÉ MARCOS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553395_div.jpg",
   },
   {
     id: 9,
@@ -89,6 +98,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DANILO ILTON",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553392_div.jpg",
   },
   {
     id: 10,
@@ -98,6 +108,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DANIEL TRIGUEIRO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553394_div.jpg",
   },
   {
     id: 11,
@@ -107,6 +118,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MISSINHO DO BODE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553964_div.jpg",
   },
   {
     id: 12,
@@ -116,6 +128,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GLECIENE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553965_div.jpg",
   },
   {
     id: 13,
@@ -125,6 +138,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PEDRO COUTINHO",
     cargo: "Governador",
     cargoId: 2,
+    pathName: "/candidate-photo/FPB150002551911_div.jpg",
   },
   {
     id: 14,
@@ -134,6 +148,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RINALDO JÚNIOR",
     cargo: "Senador",
     cargoId: 3,
+    pathName: "/candidate-photo/FPB150002548971_div.jpg",
   },
   {
     id: 15,
@@ -143,6 +158,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "STEFFENIE JESSICA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553620_div.jpg",
   },
   {
     id: 16,
@@ -152,6 +168,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SAMARA STEFANE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553622_div.jpg",
   },
   {
     id: 17,
@@ -161,6 +178,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "HERICK",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553624_div.jpg",
   },
   {
     id: 18,
@@ -170,6 +188,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FREITAS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553617_div.jpg",
   },
   {
     id: 19,
@@ -179,6 +198,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SÉRGIO GAMA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553616_div.jpg",
   },
   {
     id: 20,
@@ -188,6 +208,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SANDRO DE SANTA RITA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553618_div.jpg",
   },
   {
     id: 21,
@@ -197,6 +218,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "KRISNA GOPAL",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553619_div.jpg",
   },
   {
     id: 22,
@@ -206,6 +228,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "KEL SOUZA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553623_div.jpg",
   },
   {
     id: 23,
@@ -215,6 +238,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MONIK EVELLYN",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553621_div.jpg",
   },
   {
     id: 24,
@@ -224,6 +248,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "EARLY",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538673_div.jpg",
   },
   {
     id: 25,
@@ -233,6 +258,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PASTOR ROBSON",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538672_div.jpg",
   },
   {
     id: 26,
@@ -242,6 +268,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NÊM DOS ÓCULOS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538700_div.jpg",
   },
   {
     id: 27,
@@ -251,6 +278,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANA ZÉLIA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538694_div.jpg",
   },
   {
     id: 28,
@@ -260,6 +288,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CRISTINA ACS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538696_div.jpg",
   },
   {
     id: 29,
@@ -269,6 +298,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RAIMUNDA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538699_div.jpg",
   },
   {
     id: 30,
@@ -278,6 +308,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JANDIR FERRAZ",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538697_div.jpg",
   },
   {
     id: 31,
@@ -287,6 +318,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NININHO MANGABEIRA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538698_div.jpg",
   },
   {
     id: 32,
@@ -296,6 +328,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MÃE GORETTI",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538695_div.jpg",
   },
   {
     id: 33,
@@ -305,6 +338,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CÍCERO LUCENA",
     cargo: "Governador",
     cargoId: 2,
+    pathName: "/candidate-photo/FPB150002544133_div.jpg",
   },
   {
     id: 34,
@@ -314,6 +348,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANDRÉ GADELHA",
     cargo: "Senador",
     cargoId: 3,
+    pathName: "/candidate-photo/FPB150002544909_div.jpg",
   },
   {
     id: 35,
@@ -323,6 +358,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "VENEZIANO",
     cargo: "Senador",
     cargoId: 3,
+    pathName: "/candidate-photo/FPB150002544905_div.jpg",
   },
   {
     id: 36,
@@ -332,6 +368,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LARÚCIA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540227_div.jpg",
   },
   {
     id: 37,
@@ -341,6 +378,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "VAL DA EDUCAÇÃO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540242_div.jpg",
   },
   {
     id: 38,
@@ -350,6 +388,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PROFESSOR RONI ANDRADE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540232_div.jpg",
   },
   {
     id: 39,
@@ -359,6 +398,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PR, ISAAC VENERANDO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540245_div.jpg",
   },
   {
     id: 40,
@@ -368,6 +408,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TOVAR",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540249_div.jpg",
   },
   {
     id: 41,
@@ -377,6 +418,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CAMILA TOSCANO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540243_div.jpg",
   },
   {
     id: 42,
@@ -386,6 +428,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MADALENA CABELEIREIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540225_div.jpg",
   },
   {
     id: 43,
@@ -395,6 +438,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JACI GUIMARÃES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540251_div.jpg",
   },
   {
     id: 44,
@@ -404,6 +448,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "HERVAZIO BEZERRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540238_div.jpg",
   },
   {
     id: 45,
@@ -413,6 +458,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ENFERMEIRA RAQUEL PAULA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540254_div.jpg",
   },
   {
     id: 46,
@@ -422,6 +468,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ZÉ DO MUTIRÃO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544691_div.jpg",
   },
   {
     id: 47,
@@ -431,6 +478,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NOSMAN",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540241_div.jpg",
   },
   {
     id: 48,
@@ -440,6 +488,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, PET",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540252_div.jpg",
   },
   {
     id: 49,
@@ -449,6 +498,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO RUI",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540250_div.jpg",
   },
   {
     id: 50,
@@ -458,6 +508,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SUBTENENTE CRISPIM",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540237_div.jpg",
   },
   {
     id: 51,
@@ -467,6 +518,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ROBERTO LIMA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540248_div.jpg",
   },
   {
     id: 52,
@@ -476,6 +528,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CAIO ROBERTO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540235_div.jpg",
   },
   {
     id: 53,
@@ -485,6 +538,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PROFESSOR FRANCISCO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540239_div.jpg",
   },
   {
     id: 54,
@@ -494,6 +548,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PROF, HOSANA CARNEIRO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540230_div.jpg",
   },
   {
     id: 55,
@@ -503,6 +558,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TOINHO NASCIMENTO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540240_div.jpg",
   },
   {
     id: 56,
@@ -512,6 +568,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "VITOR HUGO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540253_div.jpg",
   },
   {
     id: 57,
@@ -521,6 +578,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FÁBIO RAMALHO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540246_div.jpg",
   },
   {
     id: 58,
@@ -530,6 +588,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TERESA CARNEIRO FELICIANO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540226_div.jpg",
   },
   {
     id: 59,
@@ -539,6 +598,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TERESA CARNEIRO FELICIANO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002554321_div.jpg",
   },
   {
     id: 60,
@@ -548,6 +608,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CARLINHOS DE NIAS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540236_div.jpg",
   },
   {
     id: 61,
@@ -557,6 +618,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LENA DO PARAÍBA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540244_div.jpg",
   },
   {
     id: 62,
@@ -566,6 +628,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "OSVALDO SANTOS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540229_div.jpg",
   },
   {
     id: 63,
@@ -575,6 +638,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANA CLÁUDIA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540233_div.jpg",
   },
   {
     id: 64,
@@ -584,6 +648,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JOALLISON SANTOS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540228_div.jpg",
   },
   {
     id: 65,
@@ -593,6 +658,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DINHO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540255_div.jpg",
   },
   {
     id: 66,
@@ -602,6 +668,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MANU DE SOUZA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540231_div.jpg",
   },
   {
     id: 67,
@@ -611,6 +678,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "POCA CABELEIREIRO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540247_div.jpg",
   },
   {
     id: 68,
@@ -620,6 +688,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FELIPE LEITÃO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540234_div.jpg",
   },
   {
     id: 69,
@@ -629,6 +698,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FRANCISCO MENDONÇA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002536467_div.jpg",
   },
   {
     id: 70,
@@ -638,6 +708,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CATARINA NEVES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002536471_div.jpg",
   },
   {
     id: 71,
@@ -647,6 +718,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "BETO LIMA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002536470_div.jpg",
   },
   {
     id: 72,
@@ -656,6 +728,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "EDUARDO WILLIAM",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002536466_div.jpg",
   },
   {
     id: 73,
@@ -665,6 +738,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ALINE GREY",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002536468_div.jpg",
   },
   {
     id: 74,
@@ -674,6 +748,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LUAN BRASILIANO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002536469_div.jpg",
   },
   {
     id: 75,
@@ -683,6 +758,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SERGIO DO REAL PREÇO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548925_div.jpg",
   },
   {
     id: 76,
@@ -692,6 +768,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "O PROFETA IVANILDO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548926_div.jpg",
   },
   {
     id: 77,
@@ -701,6 +778,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LUMITÂNIA DIAS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548928_div.jpg",
   },
   {
     id: 78,
@@ -710,6 +788,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARILENE ALVES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548927_div.jpg",
   },
   {
     id: 79,
@@ -719,6 +798,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARCOS OLIVEIRA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548923_div.jpg",
   },
   {
     id: 80,
@@ -728,6 +808,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LULA DA TAPIOCA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548924_div.jpg",
   },
   {
     id: 81,
@@ -737,6 +818,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MAJOR FÁBIO",
     cargo: "Senador",
     cargoId: 3,
+    pathName: "/candidate-photo/FPB150002548968_div.jpg",
   },
   {
     id: 82,
@@ -746,6 +828,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RODRIGO LIMA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548400_div.jpg",
   },
   {
     id: 83,
@@ -755,6 +838,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DJANEIDE ALMEIDA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548397_div.jpg",
   },
   {
     id: 84,
@@ -764,6 +848,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "EMERSON WALLACE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548395_div.jpg",
   },
   {
     id: 85,
@@ -773,6 +858,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANDREA ARAUJO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548922_div.jpg",
   },
   {
     id: 86,
@@ -782,6 +868,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NILDO TERRA BOA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548393_div.jpg",
   },
   {
     id: 87,
@@ -791,6 +878,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, DANILLO RAMALHO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548399_div.jpg",
   },
   {
     id: 88,
@@ -800,6 +888,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DIEGO BRAYTNNER",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548394_div.jpg",
   },
   {
     id: 89,
@@ -809,6 +898,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TC EDILSON BERNARDO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548391_div.jpg",
   },
   {
     id: 90,
@@ -818,6 +908,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CATARINA ROCHA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548921_div.jpg",
   },
   {
     id: 91,
@@ -827,6 +918,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "HENRIQUE QUEIROZ",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548398_div.jpg",
   },
   {
     id: 92,
@@ -836,6 +928,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LUCENILDO BRANCO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548390_div.jpg",
   },
   {
     id: 93,
@@ -845,6 +938,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JUNIOR DO TREM",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548392_div.jpg",
   },
   {
     id: 94,
@@ -854,6 +948,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MISSIONÁRIA IVONE DO HU",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002548396_div.jpg",
   },
   {
     id: 95,
@@ -863,6 +958,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PERCIVAL",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544177_div.jpg",
   },
   {
     id: 96,
@@ -872,6 +968,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ROSI CRUZ",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544176_div.jpg",
   },
   {
     id: 97,
@@ -881,6 +978,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GERVÁSIO MAIA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544178_div.jpg",
   },
   {
     id: 98,
@@ -890,6 +988,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JÔ OLIVEIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544147_div.jpg",
   },
   {
     id: 99,
@@ -899,6 +998,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, ROMUALDO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544157_div.jpg",
   },
   {
     id: 100,
@@ -908,6 +1008,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "INÁCIO FALCÃO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544151_div.jpg",
   },
   {
     id: 101,
@@ -917,6 +1018,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CAMILO DUARTE",
     cargo: "Governador",
     cargoId: 2,
+    pathName: "/candidate-photo/FPB150002552603_div.jpg",
   },
   {
     id: 102,
@@ -926,6 +1028,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ADRIANO TRAJANO",
     cargo: "Senador",
     cargoId: 3,
+    pathName: "/candidate-photo/FPB150002552607_div.jpg",
   },
   {
     id: 103,
@@ -935,6 +1038,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LATIFI ABOU HAIKAL",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552605_div.jpg",
   },
   {
     id: 104,
@@ -944,6 +1048,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "VAL ALVES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552604_div.jpg",
   },
   {
     id: 105,
@@ -953,6 +1058,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TENENTE JAIR",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552379_div.jpg",
   },
   {
     id: 106,
@@ -962,6 +1068,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MÁRCIO LINS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552385_div.jpg",
   },
   {
     id: 107,
@@ -971,6 +1078,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "INALDO ANDRADE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552380_div.jpg",
   },
   {
     id: 108,
@@ -980,6 +1088,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JULIANA ALMEIDA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552383_div.jpg",
   },
   {
     id: 109,
@@ -989,6 +1098,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "WELLINGTON SILVA SOUSA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552378_div.jpg",
   },
   {
     id: 110,
@@ -998,6 +1108,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MOCA MEDEIROS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552382_div.jpg",
   },
   {
     id: 111,
@@ -1007,6 +1118,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ALLANA RODRIGUES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553921_div.jpg",
   },
   {
     id: 112,
@@ -1016,6 +1128,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "AIRTON PIRES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552377_div.jpg",
   },
   {
     id: 113,
@@ -1025,6 +1138,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ERIKA VON SOHSTEN",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552376_div.jpg",
   },
   {
     id: 114,
@@ -1034,6 +1148,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MAZUREIK RODRIGUES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552386_div.jpg",
   },
   {
     id: 115,
@@ -1043,6 +1158,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO LEE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552384_div.jpg",
   },
   {
     id: 116,
@@ -1052,6 +1168,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GILSON ROBERTO (OVÃO)",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552381_div.jpg",
   },
   {
     id: 117,
@@ -1061,6 +1178,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "EVILIANE LINS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552387_div.jpg",
   },
   {
     id: 118,
@@ -1070,6 +1188,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO KARLA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002554304_div.jpg",
   },
   {
     id: 119,
@@ -1079,6 +1198,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DENISE RIBEIRO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551585_div.jpg",
   },
   {
     id: 120,
@@ -1088,6 +1208,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SÁVIO SALVADOR",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551586_div.jpg",
   },
   {
     id: 121,
@@ -1097,6 +1218,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MONICA RODRIGUES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551590_div.jpg",
   },
   {
     id: 122,
@@ -1106,6 +1228,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO SÉRGIO ARAUJO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551589_div.jpg",
   },
   {
     id: 123,
@@ -1115,6 +1238,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JUNIO LEANDRO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551584_div.jpg",
   },
   {
     id: 124,
@@ -1124,6 +1248,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO BARLAVENTO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551596_div.jpg",
   },
   {
     id: 125,
@@ -1133,6 +1258,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "BARBOSA DE MANDACARU",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551582_div.jpg",
   },
   {
     id: 126,
@@ -1142,6 +1268,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MORENA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551595_div.jpg",
   },
   {
     id: 127,
@@ -1151,6 +1278,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ELAINE KARLA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002554304_div.jpg",
   },
   {
     id: 128,
@@ -1160,6 +1288,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "EVILLIANE LINS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002554303_div.jpg",
   },
   {
     id: 129,
@@ -1169,6 +1298,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, ANDRÉ LIMA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551591_div.jpg",
   },
   {
     id: 130,
@@ -1178,6 +1308,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANDRÉ LIMA JÚNIOR",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002554486_div.jpg",
   },
   {
     id: 131,
@@ -1187,6 +1318,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JOAQUIM MORAIS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551583_div.jpg",
   },
   {
     id: 132,
@@ -1196,6 +1328,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, ERICO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551588_div.jpg",
   },
   {
     id: 133,
@@ -1205,6 +1338,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CAPITÃO PEREIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551587_div.jpg",
   },
   {
     id: 134,
@@ -1214,6 +1348,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARLANGELA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551581_div.jpg",
   },
   {
     id: 135,
@@ -1223,6 +1358,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JORGE MAIA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551594_div.jpg",
   },
   {
     id: 136,
@@ -1232,6 +1368,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PROFESSORA KALINA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551592_div.jpg",
   },
   {
     id: 137,
@@ -1241,6 +1378,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "WAGNER NASCIMENTO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002551593_div.jpg",
   },
   {
     id: 138,
@@ -1250,6 +1388,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "EFRAIM FILHO",
     cargo: "Governador",
     cargoId: 2,
+    pathName: "/candidate-photo/FPB150002538692_div.jpg",
   },
   {
     id: 139,
@@ -1259,6 +1398,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, MARCELO QUEIROGA",
     cargo: "Senador",
     cargoId: 3,
+    pathName: "/candidate-photo/FPB150002538459_div.jpg",
   },
   {
     id: 140,
@@ -1268,6 +1408,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ALEXANDRO COCO SECO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538447_div.jpg",
   },
   {
     id: 141,
@@ -1277,6 +1418,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NÁGILA SANTANA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538458_div.jpg",
   },
   {
     id: 142,
@@ -1286,6 +1428,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GEORGE MORAIS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538453_div.jpg",
   },
   {
     id: 143,
@@ -1295,6 +1438,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GERANA GOUVEIA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538450_div.jpg",
   },
   {
     id: 144,
@@ -1304,6 +1448,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CABO GILBERTO SILVA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538457_div.jpg",
   },
   {
     id: 145,
@@ -1313,6 +1458,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CANTORA MUNIQUE MARINHO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538455_div.jpg",
   },
   {
     id: 146,
@@ -1322,6 +1468,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANDRÉ AMARAL FILHO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538452_div.jpg",
   },
   {
     id: 147,
@@ -1331,6 +1478,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, ALEDSON MOURA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538446_div.jpg",
   },
   {
     id: 148,
@@ -1340,6 +1488,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ARLEY MOURA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002554421_div.jpg",
   },
   {
     id: 149,
@@ -1349,6 +1498,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CAROL GOMES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538454_div.jpg",
   },
   {
     id: 150,
@@ -1358,6 +1508,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DANIEL CONHECE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538456_div.jpg",
   },
   {
     id: 151,
@@ -1367,6 +1518,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TIA MILA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538448_div.jpg",
   },
   {
     id: 152,
@@ -1376,6 +1528,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ALEXANDRE DO SINDICATO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538449_div.jpg",
   },
   {
     id: 153,
@@ -1385,6 +1538,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DEDA CLAUDINO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002538451_div.jpg",
   },
   {
     id: 154,
@@ -1394,6 +1548,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FÁBIO LOPES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541192_div.jpg",
   },
   {
     id: 155,
@@ -1403,6 +1558,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SAMARA SUASSUNA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541180_div.jpg",
   },
   {
     id: 156,
@@ -1412,6 +1568,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CAPITÃ ALINE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541206_div.jpg",
   },
   {
     id: 157,
@@ -1421,6 +1578,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RAQUEL FRANÇA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541184_div.jpg",
   },
   {
     id: 158,
@@ -1430,6 +1588,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MÔNICA ALBUQUERQUE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541198_div.jpg",
   },
   {
     id: 159,
@@ -1439,6 +1598,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARCELLA TORRES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541177_div.jpg",
   },
   {
     id: 160,
@@ -1448,6 +1608,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ALEXANDRE REI DOS TERRENOS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541181_div.jpg",
   },
   {
     id: 161,
@@ -1457,6 +1618,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CLOVES MALVINAS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541174_div.jpg",
   },
   {
     id: 162,
@@ -1466,6 +1628,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MERINHA DA CASA DE APOIO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541202_div.jpg",
   },
   {
     id: 163,
@@ -1475,6 +1638,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "WALKÍRIA ROCHA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541207_div.jpg",
   },
   {
     id: 164,
@@ -1484,6 +1648,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SAMMARA AGUIAR SAMMY",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541201_div.jpg",
   },
   {
     id: 165,
@@ -1493,6 +1658,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "VITOR RIBEIRO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541186_div.jpg",
   },
   {
     id: 166,
@@ -1502,6 +1668,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "WALLBER VIRGOLINO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541191_div.jpg",
   },
   {
     id: 167,
@@ -1511,6 +1678,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO CLEBER",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549797_div.jpg",
   },
   {
     id: 168,
@@ -1520,6 +1688,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NILVAN FERREIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541194_div.jpg",
   },
   {
     id: 169,
@@ -1529,6 +1698,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TEN ALVES DA FLAMENGUEIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541197_div.jpg",
   },
   {
     id: 170,
@@ -1538,6 +1708,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LAMPIÃO GAÚCHO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541200_div.jpg",
   },
   {
     id: 171,
@@ -1547,6 +1718,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARY",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541175_div.jpg",
   },
   {
     id: 172,
@@ -1556,6 +1728,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GESKA DE LAURINHO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541173_div.jpg",
   },
   {
     id: 173,
@@ -1565,6 +1738,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MICHELY FARINA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541205_div.jpg",
   },
   {
     id: 174,
@@ -1574,6 +1748,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ENGENHEIRO JOAB",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541199_div.jpg",
   },
   {
     id: 175,
@@ -1583,6 +1758,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DEPUTA MANÉ BUCHADA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541204_div.jpg",
   },
   {
     id: 176,
@@ -1592,6 +1768,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CILINHA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541189_div.jpg",
   },
   {
     id: 177,
@@ -1601,6 +1778,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SEGUNDO DOMICIANO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541172_div.jpg",
   },
   {
     id: 178,
@@ -1610,6 +1788,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FABIANO SOARES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541176_div.jpg",
   },
   {
     id: 179,
@@ -1619,6 +1798,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, EVANDRO TRINDADE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541179_div.jpg",
   },
   {
     id: 180,
@@ -1628,6 +1808,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANDRÉ GOMES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541185_div.jpg",
   },
   {
     id: 181,
@@ -1637,6 +1818,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ALAN DE BASTOS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541195_div.jpg",
   },
   {
     id: 182,
@@ -1646,6 +1828,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ZÉ MEDEIROS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541193_div.jpg",
   },
   {
     id: 183,
@@ -1655,6 +1838,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PROFESSOR ARLISON",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541183_div.jpg",
   },
   {
     id: 184,
@@ -1664,6 +1848,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CARLÃO PELO BEM",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541196_div.jpg",
   },
   {
     id: 185,
@@ -1673,6 +1858,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CORONEL SOBREIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541187_div.jpg",
   },
   {
     id: 186,
@@ -1682,6 +1868,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DANIEL SOBRINHO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541178_div.jpg",
   },
   {
     id: 187,
@@ -1691,6 +1878,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CLÁUDIO O SERVENTE DE OBRAS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541182_div.jpg",
   },
   {
     id: 188,
@@ -1700,6 +1888,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MELCA FARIAS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541188_div.jpg",
   },
   {
     id: 189,
@@ -1709,6 +1898,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PROFESSOR JOSIAS MENDES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541203_div.jpg",
   },
   {
     id: 190,
@@ -1718,6 +1908,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO NETO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002541190_div.jpg",
   },
   {
     id: 191,
@@ -1727,6 +1918,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SILVIA DA PESCA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002533574_div.jpg",
   },
   {
     id: 192,
@@ -1736,6 +1928,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ALINE MARKINNA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002554302_div.jpg",
   },
   {
     id: 193,
@@ -1745,6 +1938,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CILOCA BARROZO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002533569_div.jpg",
   },
   {
     id: 194,
@@ -1754,6 +1948,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SANDRA MARROCOS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002533573_div.jpg",
   },
   {
     id: 195,
@@ -1763,6 +1958,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "AMANDA CSI",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002533575_div.jpg",
   },
   {
     id: 196,
@@ -1772,6 +1968,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LÉO GADELHA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002533568_div.jpg",
   },
   {
     id: 197,
@@ -1781,6 +1978,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NELSON GOMES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002533572_div.jpg",
   },
   {
     id: 198,
@@ -1790,6 +1988,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ROMERO RODRIGUES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002533571_div.jpg",
   },
   {
     id: 199,
@@ -1799,6 +1998,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RUY CARNEIRO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002533578_div.jpg",
   },
   {
     id: 200,
@@ -1808,6 +2008,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARA CABRAL",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002533577_div.jpg",
   },
   {
     id: 201,
@@ -1817,6 +2018,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JACÓ MACIEL",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002533570_div.jpg",
   },
   {
     id: 202,
@@ -1826,6 +2028,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MIGUEL PIMENTA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002533576_div.jpg",
   },
   {
     id: 203,
@@ -1835,6 +2038,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LUCAS RIBEIRO",
     cargo: "Governador",
     cargoId: 2,
+    pathName: "/candidate-photo/FPB150002551789_div.jpg",
   },
   {
     id: 204,
@@ -1844,6 +2048,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ELIZA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549640_div.jpg",
   },
   {
     id: 205,
@@ -1853,6 +2058,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TARCÍSIO JARDIM",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549641_div.jpg",
   },
   {
     id: 206,
@@ -1862,6 +2068,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "AGUINALDO RIBEIRO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549636_div.jpg",
   },
   {
     id: 207,
@@ -1871,6 +2078,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR° EMERSON PANTA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549644_div.jpg",
   },
   {
     id: 208,
@@ -1880,6 +2088,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RICARDO BARBOSA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549637_div.jpg",
   },
   {
     id: 209,
@@ -1889,6 +2098,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GUGA PET",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549639_div.jpg",
   },
   {
     id: 210,
@@ -1898,6 +2108,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "POLLYANNA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549646_div.jpg",
   },
   {
     id: 211,
@@ -1907,6 +2118,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "HERMERSON CAMINHONEIRO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549642_div.jpg",
   },
   {
     id: 212,
@@ -1916,6 +2128,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CICINHA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549645_div.jpg",
   },
   {
     id: 213,
@@ -1925,6 +2138,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JULIAN LEMOS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549635_div.jpg",
   },
   {
     id: 214,
@@ -1934,6 +2148,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DIEGO TAVARES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548943_div.jpg",
   },
   {
     id: 215,
@@ -1943,6 +2158,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DUDU SOARES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548939_div.jpg",
   },
   {
     id: 216,
@@ -1952,6 +2168,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MICHEL HENRIQUE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548940_div.jpg",
   },
   {
     id: 217,
@@ -1961,6 +2178,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LUCAS LUCENA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548929_div.jpg",
   },
   {
     id: 218,
@@ -1970,6 +2188,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PAULO FERREIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548962_div.jpg",
   },
   {
     id: 219,
@@ -1979,6 +2198,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "VALDILENE QUEIROZ",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002554203_div.jpg",
   },
   {
     id: 220,
@@ -1988,6 +2208,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DRª JANE PANTA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548965_div.jpg",
   },
   {
     id: 221,
@@ -1997,6 +2218,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "BOSCO CARNEIRO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548941_div.jpg",
   },
   {
     id: 222,
@@ -2006,6 +2228,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GUINÉ",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548937_div.jpg",
   },
   {
     id: 223,
@@ -2015,6 +2238,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LINDOLFO PIRES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548961_div.jpg",
   },
   {
     id: 224,
@@ -2024,6 +2248,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARCIA DA SALADA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548953_div.jpg",
   },
   {
     id: 225,
@@ -2033,6 +2258,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "BISPO JOSÉ LUIZ",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548963_div.jpg",
   },
   {
     id: 226,
@@ -2042,6 +2268,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MAJOR FERNANDO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548951_div.jpg",
   },
   {
     id: 227,
@@ -2051,6 +2278,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DANE ALENCAR",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548964_div.jpg",
   },
   {
     id: 228,
@@ -2060,6 +2288,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LORENA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548955_div.jpg",
   },
   {
     id: 229,
@@ -2069,6 +2298,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GALEGO SOUZA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548959_div.jpg",
   },
   {
     id: 230,
@@ -2078,6 +2308,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JADER PIMENTEL FILHO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548954_div.jpg",
   },
   {
     id: 231,
@@ -2087,6 +2318,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SUPERVISOR JARBAS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548952_div.jpg",
   },
   {
     id: 232,
@@ -2096,6 +2328,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RUAN MARTINS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548949_div.jpg",
   },
   {
     id: 233,
@@ -2105,6 +2338,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "EDUARDO CARNEIRO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548950_div.jpg",
   },
   {
     id: 234,
@@ -2114,6 +2348,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JOÃO PAULO SEGUNDO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548935_div.jpg",
   },
   {
     id: 235,
@@ -2123,6 +2358,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ROSÁLIA LUCAS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548933_div.jpg",
   },
   {
     id: 236,
@@ -2132,6 +2368,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LUCAS CAÇULA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548942_div.jpg",
   },
   {
     id: 237,
@@ -2141,6 +2378,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CÉLIA ALVES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548957_div.jpg",
   },
   {
     id: 238,
@@ -2150,6 +2388,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "KELLY DO BOTAFOGO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548936_div.jpg",
   },
   {
     id: 239,
@@ -2159,6 +2398,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FABIOLA REZENDE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548938_div.jpg",
   },
   {
     id: 240,
@@ -2168,6 +2408,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JOÃO GONÇALVES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548944_div.jpg",
   },
   {
     id: 241,
@@ -2177,6 +2418,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ZÉ ALDEMIR",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548931_div.jpg",
   },
   {
     id: 242,
@@ -2186,6 +2428,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JÚNIOR ARAÚJO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548932_div.jpg",
   },
   {
     id: 243,
@@ -2195,6 +2438,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TANILSON SOARES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548945_div.jpg",
   },
   {
     id: 244,
@@ -2204,6 +2448,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JOÃO BATISTA DE BAYEUX",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548946_div.jpg",
   },
   {
     id: 245,
@@ -2213,6 +2458,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANDRÉ MATIAS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548948_div.jpg",
   },
   {
     id: 246,
@@ -2222,6 +2468,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CORONEL ALMEIDA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549760_div.jpg",
   },
   {
     id: 247,
@@ -2231,6 +2478,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PATRÍCIA BERGER",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549761_div.jpg",
   },
   {
     id: 248,
@@ -2240,6 +2488,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SILVIO SOARES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549766_div.jpg",
   },
   {
     id: 249,
@@ -2249,6 +2498,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RAY ALENCAR",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549762_div.jpg",
   },
   {
     id: 250,
@@ -2258,6 +2508,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ELI MANSUR",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549767_div.jpg",
   },
   {
     id: 251,
@@ -2267,6 +2518,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JOAO AZEVÊDO",
     cargo: "Senador",
     cargoId: 3,
+    pathName: "/candidate-photo/FPB150002549793_div.jpg",
   },
   {
     id: 252,
@@ -2276,6 +2528,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ZEZINHO BOTAFOGO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544601_div.jpg",
   },
   {
     id: 253,
@@ -2285,6 +2538,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CRIS FURTADO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544602_div.jpg",
   },
   {
     id: 254,
@@ -2294,6 +2548,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ROBERTO BURITY",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544606_div.jpg",
   },
   {
     id: 255,
@@ -2303,6 +2558,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO HELMUT",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553601_div.jpg",
   },
   {
     id: 256,
@@ -2312,6 +2568,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LÍDIA MOURA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544608_div.jpg",
   },
   {
     id: 257,
@@ -2321,6 +2578,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RACHEL MAROJA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544603_div.jpg",
   },
   {
     id: 258,
@@ -2330,6 +2588,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "REPÓRTER CARLOS SANTOS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544609_div.jpg",
   },
   {
     id: 259,
@@ -2339,6 +2598,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FÁBIO TYRONE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544604_div.jpg",
   },
   {
     id: 260,
@@ -2348,6 +2608,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JAILMA CARVALHO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544607_div.jpg",
   },
   {
     id: 261,
@@ -2357,6 +2618,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO WELLINGTON COBRA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544605_div.jpg",
   },
   {
     id: 262,
@@ -2366,6 +2628,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, LEVY DA HABITAÇÃO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544610_div.jpg",
   },
   {
     id: 263,
@@ -2375,6 +2638,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TIBERIO LIMEIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544655_div.jpg",
   },
   {
     id: 264,
@@ -2384,6 +2648,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "WIVIANE PAIVA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544665_div.jpg",
   },
   {
     id: 265,
@@ -2393,6 +2658,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANÍSIO MAIA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544670_div.jpg",
   },
   {
     id: 266,
@@ -2402,6 +2668,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ALDENORA BEZERRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544656_div.jpg",
   },
   {
     id: 267,
@@ -2411,6 +2678,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "KLÉCIDA RODRIGUES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544657_div.jpg",
   },
   {
     id: 268,
@@ -2420,6 +2688,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NELINHO COSTA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544666_div.jpg",
   },
   {
     id: 269,
@@ -2429,6 +2698,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TENENTE CORONEL VIVIANE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544661_div.jpg",
   },
   {
     id: 270,
@@ -2438,6 +2708,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GERLANE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544669_div.jpg",
   },
   {
     id: 271,
@@ -2447,6 +2718,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SIBELLE BARROS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544654_div.jpg",
   },
   {
     id: 272,
@@ -2456,6 +2728,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LUCCA NUTO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544664_div.jpg",
   },
   {
     id: 273,
@@ -2465,6 +2738,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DRA FLAVINA FELICIANO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544663_div.jpg",
   },
   {
     id: 274,
@@ -2474,6 +2748,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DIVA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544653_div.jpg",
   },
   {
     id: 275,
@@ -2483,6 +2758,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JOSE PEREIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544660_div.jpg",
   },
   {
     id: 276,
@@ -2492,6 +2768,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DANIEL DA SAÚDE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544651_div.jpg",
   },
   {
     id: 277,
@@ -2501,6 +2778,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CHICO MENDES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549794_div.jpg",
   },
   {
     id: 278,
@@ -2510,6 +2788,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NIL MENDES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002553920_div.jpg",
   },
   {
     id: 279,
@@ -2519,6 +2798,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JEANE OLIVEIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544659_div.jpg",
   },
   {
     id: 280,
@@ -2528,6 +2808,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CARLOS RENATO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544658_div.jpg",
   },
   {
     id: 281,
@@ -2537,6 +2818,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "EDUARDO BRITO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544667_div.jpg",
   },
   {
     id: 282,
@@ -2546,6 +2828,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARINALDO CARDOSO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544662_div.jpg",
   },
   {
     id: 283,
@@ -2555,6 +2838,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JANINE OLIVEIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544652_div.jpg",
   },
   {
     id: 284,
@@ -2564,6 +2848,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JÚLIA VENERANDO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544014_div.jpg",
   },
   {
     id: 285,
@@ -2573,6 +2858,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "HELENA HOLANDA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544004_div.jpg",
   },
   {
     id: 286,
@@ -2582,6 +2868,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JULLYANA RIBEIRO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002554010_div.jpg",
   },
   {
     id: 287,
@@ -2591,6 +2878,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PROFESSORA LEILA FONSECA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544007_div.jpg",
   },
   {
     id: 288,
@@ -2600,6 +2888,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GERMANA WANDERLEY",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544013_div.jpg",
   },
   {
     id: 289,
@@ -2609,6 +2898,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NETTO LIMA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544006_div.jpg",
   },
   {
     id: 290,
@@ -2618,6 +2908,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "WELLINGTON ROBERTO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544010_div.jpg",
   },
   {
     id: 291,
@@ -2627,6 +2918,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RAONI MENDES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544002_div.jpg",
   },
   {
     id: 292,
@@ -2636,6 +2928,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DOUTOR JHONY",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544009_div.jpg",
   },
   {
     id: 293,
@@ -2645,6 +2938,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JOÃO DOS SANTOS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544012_div.jpg",
   },
   {
     id: 294,
@@ -2654,6 +2948,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MERSINHO LUCENA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544003_div.jpg",
   },
   {
     id: 295,
@@ -2663,6 +2958,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LANA DANTAS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544011_div.jpg",
   },
   {
     id: 296,
@@ -2672,6 +2968,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SAMUKA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544008_div.jpg",
   },
   {
     id: 297,
@@ -2681,6 +2978,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ILMA RODRIGUES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544005_div.jpg",
   },
   {
     id: 298,
@@ -2690,6 +2988,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SOUSA NETO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550472_div.jpg",
   },
   {
     id: 299,
@@ -2699,6 +2998,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TATY PARAÍBA FEMININA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550473_div.jpg",
   },
   {
     id: 300,
@@ -2708,6 +3008,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANDRÉA MIRANDA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550466_div.jpg",
   },
   {
     id: 301,
@@ -2717,6 +3018,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "EDINHO MENDES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550476_div.jpg",
   },
   {
     id: 302,
@@ -2726,6 +3028,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RAIMUNDO AGENTE DE SAÚDE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549755_div.jpg",
   },
   {
     id: 303,
@@ -2735,6 +3038,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NEIDINHA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549751_div.jpg",
   },
   {
     id: 304,
@@ -2744,6 +3048,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ULISSES BARBOSA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549742_div.jpg",
   },
   {
     id: 305,
@@ -2753,6 +3058,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "KALINE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549752_div.jpg",
   },
   {
     id: 306,
@@ -2762,6 +3068,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GILSON DANTAS (PAPALÉGUAS)",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549750_div.jpg",
   },
   {
     id: 307,
@@ -2771,6 +3078,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ZÉ DE DUNCO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549749_div.jpg",
   },
   {
     id: 308,
@@ -2780,6 +3088,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ÁLEX ANDRADE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544168_div.jpg",
   },
   {
     id: 309,
@@ -2789,6 +3098,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GABI BENVENUTTY",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544171_div.jpg",
   },
   {
     id: 310,
@@ -2798,6 +3108,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SAULO DANTAS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544169_div.jpg",
   },
   {
     id: 311,
@@ -2807,6 +3118,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PEDRO MATIAS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544170_div.jpg",
   },
   {
     id: 312,
@@ -2816,6 +3128,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RICARDO COUTINHO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544167_div.jpg",
   },
   {
     id: 313,
@@ -2825,6 +3138,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ENFERMEIRA MARY PRISCILA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544173_div.jpg",
   },
   {
     id: 314,
@@ -2834,6 +3148,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LUIZ COUTO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544174_div.jpg",
   },
   {
     id: 315,
@@ -2843,6 +3158,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LUIZA BERNARDO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544175_div.jpg",
   },
   {
     id: 316,
@@ -2852,6 +3168,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARCOS HENRIQUES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544141_div.jpg",
   },
   {
     id: 317,
@@ -2861,6 +3178,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JÂNIO PEREIRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544165_div.jpg",
   },
   {
     id: 318,
@@ -2870,6 +3188,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ROSELY LOUZADA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544166_div.jpg",
   },
   {
     id: 319,
@@ -2879,6 +3198,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SUELMA TAVARES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544149_div.jpg",
   },
   {
     id: 320,
@@ -2888,6 +3208,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, JEFFERSON",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544142_div.jpg",
   },
   {
     id: 321,
@@ -2897,6 +3218,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PROF, STENIO SOARES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544164_div.jpg",
   },
   {
     id: 322,
@@ -2906,6 +3228,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANA ARAÚJO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544159_div.jpg",
   },
   {
     id: 323,
@@ -2915,6 +3238,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NOCA RIBEIRO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544144_div.jpg",
   },
   {
     id: 324,
@@ -2924,6 +3248,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FLÁVIO BRASILEIRO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544161_div.jpg",
   },
   {
     id: 325,
@@ -2933,6 +3258,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CIDA RAMOS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544145_div.jpg",
   },
   {
     id: 326,
@@ -2942,6 +3268,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "VALDENICIO DA FETRAF",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544143_div.jpg",
   },
   {
     id: 327,
@@ -2951,6 +3278,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TERESINHA DANTAS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544150_div.jpg",
   },
   {
     id: 328,
@@ -2960,6 +3288,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PROFESSOR EDILEUDO LUCENA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544160_div.jpg",
   },
   {
     id: 329,
@@ -2969,6 +3298,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NINO DO RANGEL",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544179_div.jpg",
   },
   {
     id: 330,
@@ -2978,6 +3308,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARCELLA VIANA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544172_div.jpg",
   },
   {
     id: 331,
@@ -2987,6 +3318,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, ATHAIDE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544158_div.jpg",
   },
   {
     id: 332,
@@ -2996,6 +3328,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LUCIENE FARIAS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544154_div.jpg",
   },
   {
     id: 333,
@@ -3005,6 +3338,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "BRUNA MORAIS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544146_div.jpg",
   },
   {
     id: 334,
@@ -3014,6 +3348,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MANOEL LUDGÉRIO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544155_div.jpg",
   },
   {
     id: 335,
@@ -3023,6 +3358,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TATIANA GOMES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544148_div.jpg",
   },
   {
     id: 336,
@@ -3032,6 +3368,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANDERSON MONTEIRO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544152_div.jpg",
   },
   {
     id: 337,
@@ -3041,6 +3378,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LAFA GADELHA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544162_div.jpg",
   },
   {
     id: 338,
@@ -3050,6 +3388,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARCOS ERON",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544156_div.jpg",
   },
   {
     id: 339,
@@ -3059,6 +3398,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, BRUNO DERIU",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544153_div.jpg",
   },
   {
     id: 340,
@@ -3068,6 +3408,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CHIÓ",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544163_div.jpg",
   },
   {
     id: 341,
@@ -3077,6 +3418,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ALEXANDRE FERNANDES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550474_div.jpg",
   },
   {
     id: 342,
@@ -3086,6 +3428,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "WALKÍRIA LINS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550477_div.jpg",
   },
   {
     id: 343,
@@ -3095,6 +3438,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "EDUARDA ALMEIDA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550471_div.jpg",
   },
   {
     id: 344,
@@ -3104,6 +3448,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CRISTINA GUERREIRA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550469_div.jpg",
   },
   {
     id: 345,
@@ -3113,6 +3458,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARCELA KELLY",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550475_div.jpg",
   },
   {
     id: 346,
@@ -3122,6 +3468,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO AGLAIR",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002553633_div.jpg",
   },
   {
     id: 347,
@@ -3131,6 +3478,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CATIER FERREIRA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550467_div.jpg",
   },
   {
     id: 348,
@@ -3140,6 +3488,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TOTA DOS ANIMAIS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550470_div.jpg",
   },
   {
     id: 349,
@@ -3149,6 +3498,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "BOCA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002550468_div.jpg",
   },
   {
     id: 350,
@@ -3158,6 +3508,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RICARDO LUCENA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549745_div.jpg",
   },
   {
     id: 351,
@@ -3167,6 +3518,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "THEUS CARVALHO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549747_div.jpg",
   },
   {
     id: 352,
@@ -3176,6 +3528,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SUELY SOARES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549756_div.jpg",
   },
   {
     id: 353,
@@ -3185,6 +3538,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SARGENTO IVALDO GARRINCHA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549743_div.jpg",
   },
   {
     id: 354,
@@ -3194,6 +3548,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ELIEZER BENÍCIO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549741_div.jpg",
   },
   {
     id: 355,
@@ -3203,6 +3558,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ANELY MÔNICA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549753_div.jpg",
   },
   {
     id: 356,
@@ -3212,6 +3568,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NICE COSTA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549744_div.jpg",
   },
   {
     id: 357,
@@ -3221,6 +3578,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GILBERTO CALADO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549748_div.jpg",
   },
   {
     id: 358,
@@ -3230,6 +3588,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CÍCERO SIMPLÍCIO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549746_div.jpg",
   },
   {
     id: 359,
@@ -3239,6 +3598,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MAX JÚNIOR",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002549754_div.jpg",
   },
   {
     id: 360,
@@ -3248,6 +3608,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NABOR",
     cargo: "Senador",
     cargoId: 3,
+    pathName: "/candidate-photo/FPB150002549791_div.jpg",
   },
   {
     id: 361,
@@ -3257,6 +3618,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CAPITÃ REBECA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544210_div.jpg",
   },
   {
     id: 362,
@@ -3266,6 +3628,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RENAN DA RESENHA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544212_div.jpg",
   },
   {
     id: 363,
@@ -3275,6 +3638,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "WILSON SANTIAGO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544208_div.jpg",
   },
   {
     id: 364,
@@ -3284,6 +3648,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "HUGO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544205_div.jpg",
   },
   {
     id: 365,
@@ -3293,6 +3658,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RANIERY PAULINO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544200_div.jpg",
   },
   {
     id: 366,
@@ -3302,6 +3668,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JANNY MILANES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544201_div.jpg",
   },
   {
     id: 367,
@@ -3311,6 +3678,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SILVIA BENJAMIN",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544206_div.jpg",
   },
   {
     id: 368,
@@ -3320,6 +3688,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TIÃO GOMES",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544209_div.jpg",
   },
   {
     id: 369,
@@ -3329,6 +3698,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MURILO GALDINO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544203_div.jpg",
   },
   {
     id: 370,
@@ -3338,6 +3708,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NILSON LACERDA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544207_div.jpg",
   },
   {
     id: 371,
@@ -3347,6 +3718,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MAÍSA CARTAXO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544202_div.jpg",
   },
   {
     id: 372,
@@ -3356,6 +3728,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "VALDIR TRINDADE",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544204_div.jpg",
   },
   {
     id: 373,
@@ -3365,6 +3738,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "POLICIAL CAIO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544211_div.jpg",
   },
   {
     id: 374,
@@ -3374,6 +3748,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NATÁLIA RODRIGUES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544191_div.jpg",
   },
   {
     id: 375,
@@ -3383,6 +3758,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "WILSON FILHO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544184_div.jpg",
   },
   {
     id: 376,
@@ -3392,6 +3768,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "OLÍVIA MOTTA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544186_div.jpg",
   },
   {
     id: 377,
@@ -3401,6 +3778,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JUTAY MENESES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544190_div.jpg",
   },
   {
     id: 378,
@@ -3410,6 +3788,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CICINHO LIMA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544188_div.jpg",
   },
   {
     id: 379,
@@ -3419,6 +3798,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NOBINHO ALMEIDA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544195_div.jpg",
   },
   {
     id: 380,
@@ -3428,6 +3808,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CORONEL SERGIO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544182_div.jpg",
   },
   {
     id: 381,
@@ -3437,6 +3818,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ENFERMEIRA RAYRA BESERRA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544193_div.jpg",
   },
   {
     id: 382,
@@ -3446,6 +3828,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CAPITÃO MARADONA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544192_div.jpg",
   },
   {
     id: 383,
@@ -3455,6 +3838,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FELIPE COUTINHO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544194_div.jpg",
   },
   {
     id: 384,
@@ -3464,6 +3848,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARCIO ROBERTO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544198_div.jpg",
   },
   {
     id: 385,
@@ -3473,6 +3858,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CORONEL LUCAS",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544183_div.jpg",
   },
   {
     id: 386,
@@ -3482,6 +3868,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ADRIANO GALDINO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544180_div.jpg",
   },
   {
     id: 387,
@@ -3491,6 +3878,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DANIELLE DO VALE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544197_div.jpg",
   },
   {
     id: 388,
@@ -3500,6 +3888,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ZEZÉ",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544181_div.jpg",
   },
   {
     id: 389,
@@ -3509,6 +3898,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LUCIANO CARTAXO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544196_div.jpg",
   },
   {
     id: 390,
@@ -3518,6 +3908,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR, JARQUES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544185_div.jpg",
   },
   {
     id: 391,
@@ -3527,6 +3918,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PROFESSORA IVONETE",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544189_div.jpg",
   },
   {
     id: 392,
@@ -3536,6 +3928,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "BRANCO MENDES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544187_div.jpg",
   },
   {
     id: 393,
@@ -3545,6 +3938,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LEONICE LOPES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002544199_div.jpg",
   },
   {
     id: 394,
@@ -3554,6 +3948,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GERLANE FREITAS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549758_div.jpg",
   },
   {
     id: 395,
@@ -3563,6 +3958,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PATRÍCIA MOTA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549768_div.jpg",
   },
   {
     id: 396,
@@ -3572,6 +3968,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "BETINHO DA RS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549759_div.jpg",
   },
   {
     id: 397,
@@ -3581,6 +3978,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FÁBIO CARNEIRO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549764_div.jpg",
   },
   {
     id: 398,
@@ -3590,6 +3988,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "TRAJANO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549763_div.jpg",
   },
   {
     id: 399,
@@ -3599,6 +3998,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "POLLY DO ADOTA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549765_div.jpg",
   },
   {
     id: 400,
@@ -3608,6 +4008,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ADRIANA ALMEIDA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549769_div.jpg",
   },
   {
     id: 401,
@@ -3617,6 +4018,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NILTON MAIA DA SHALON",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002554301_div.jpg",
   },
   {
     id: 402,
@@ -3626,6 +4028,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GENILSON LUCENYAH",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549757_div.jpg",
   },
   {
     id: 403,
@@ -3635,6 +4038,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SERGIO RAFAEL",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002552726_div.jpg",
   },
   {
     id: 404,
@@ -3644,6 +4048,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARÍLIA DANTAS",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549643_div.jpg",
   },
   {
     id: 405,
@@ -3653,6 +4058,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DR° DAMIÃO",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002549638_div.jpg",
   },
   {
     id: 406,
@@ -3662,6 +4068,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "DANIEL GOMES",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548930_div.jpg",
   },
   {
     id: 407,
@@ -3671,6 +4078,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MARIA PORTO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548947_div.jpg",
   },
   {
     id: 408,
@@ -3680,6 +4088,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "MADÁ",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548960_div.jpg",
   },
   {
     id: 409,
@@ -3689,6 +4098,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "NATHALYA FERNANDA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548934_div.jpg",
   },
   {
     id: 410,
@@ -3698,6 +4108,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FERNANDA ALVINO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548958_div.jpg",
   },
   {
     id: 411,
@@ -3707,6 +4118,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "GILBERTINHO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002548956_div.jpg",
   },
   {
     id: 412,
@@ -3716,6 +4128,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "YURI EZEQUIEL",
     cargo: "Governador",
     cargoId: 2,
+    pathName: "/candidate-photo/FPB150002540204_div.jpg",
   },
   {
     id: 413,
@@ -3725,6 +4138,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ROSILENE SANTANA",
     cargo: "Senador",
     cargoId: 3,
+    pathName: "/candidate-photo/FPB150002544135_div.jpg",
   },
   {
     id: 414,
@@ -3734,6 +4148,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JOÃO BATISTA",
     cargo: "Senador",
     cargoId: 3,
+    pathName: "/candidate-photo/FPB150002544140_div.jpg",
   },
   {
     id: 415,
@@ -3743,6 +4158,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JONAS SOUZA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544214_div.jpg",
   },
   {
     id: 416,
@@ -3752,6 +4168,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ISABELE DO CORRENTEZA",
     cargo: "Deputal Federal",
     cargoId: 4,
+    pathName: "/candidate-photo/FPB150002544213_div.jpg",
   },
   {
     id: 417,
@@ -3761,6 +4178,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "JOZIVAN ANTERO",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540202_div.jpg",
   },
   {
     id: 418,
@@ -3770,6 +4188,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "VITORIA OHARA",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540201_div.jpg",
   },
   {
     id: 419,
@@ -3779,6 +4198,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "PROF, CLEBER",
     cargo: "Deputado Estadual",
     cargoId: 5,
+    pathName: "/candidate-photo/FPB150002540200_div.jpg",
   },
   {
     id: 420,
@@ -3788,6 +4208,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "LULA",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002542548_div.jpg",
   },
   {
     id: 421,
@@ -3797,6 +4218,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "FLAVIO BOLSONARO",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002551544_div.jpg",
   },
   {
     id: 422,
@@ -3806,6 +4228,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RENAN SANTOS",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002540694_div.jpg",
   },
   {
     id: 423,
@@ -3815,6 +4238,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RONALDO CAIADO",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002551932_div.jpg",
   },
   {
     id: 424,
@@ -3824,6 +4248,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ESCRITOR AUGUSTO CURY",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002551547_div.jpg",
   },
   {
     id: 425,
@@ -3833,6 +4258,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "CLARIANA BARAO",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002552484_div.jpg",
   },
   {
     id: 426,
@@ -3842,6 +4268,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "ZEMA",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002539826_div.jpg",
   },
   {
     id: 427,
@@ -3851,6 +4278,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "RUI COSTA PIMENTA",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002552487_div.jpg",
   },
   {
     id: 428,
@@ -3860,6 +4288,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "SAMARA",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002538811_div.jpg",
   },
   {
     id: 429,
@@ -3869,6 +4298,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "VETERINÁRIO WILSON GRASSI",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002548139_div.jpg",
   },
   {
     id: 430,
@@ -3878,6 +4308,7 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "EDMILSON COSTA",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002551975_div.jpg",
   },
   {
     id: 431,
@@ -3887,5 +4318,6 @@ export const candidates: Candidate[] = [
     nomeUrnaCandidato: "HERTZ DIAS",
     cargo: "Presidente",
     cargoId: 1,
+    pathName: "/candidate-photo/FBR280002541457_div.jpg",
   },
 ]

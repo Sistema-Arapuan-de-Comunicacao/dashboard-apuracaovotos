@@ -1,6 +1,5 @@
 "use client"
 
-import { UserRound } from "lucide-react"
 import Image from "next/image"
 import { useQuery } from "@tanstack/react-query"
 
@@ -19,6 +18,7 @@ import {
   ProgressValue,
 } from "@/components/ui/progress"
 import { fetchAllVotes } from "@/lib/api/votes"
+import { candidates as candidateCatalog } from "@/lib/data/candidate"
 import { votationLocations } from "@/lib/data/votation-location"
 import type { RankingVote } from "@/lib/types/vote"
 
@@ -34,10 +34,13 @@ const offices: OfficeConfig[] = [
   { code: "3", title: "Governador", limit: 3, size: "lg" },
   { code: "6", title: "Deputado Federal", limit: 5, size: "sm" },
   { code: "7", title: "Deputado Estadual", limit: 5, size: "sm" },
-  { code: "5", title: "Senador", limit: 5, size: "sm" },
+  { code: "5", title: "Senador", limit: 4, size: "sm" },
 ]
 
 const numberFormatter = new Intl.NumberFormat("pt-BR")
+const candidatePhotoById = new Map(
+  candidateCatalog.map((candidate) => [candidate.id, candidate.pathName]),
+)
 
 export default function Page() {
   const votesQuery = useQuery({
@@ -97,7 +100,9 @@ export default function Page() {
                   className={index < 2 ? "xl:col-span-3" : "xl:col-span-2"}
                 >
                   <CardHeader>
-                    <CardTitle>{office.title}</CardTitle>
+                    <CardTitle className={index < 2 ? "text-center" : undefined}>
+                      {office.title}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-col gap-2.5">
                     {candidates.map((candidate) => (
@@ -141,12 +146,21 @@ function CandidateCard({ candidate, size }: CandidateCardProps) {
   const percentage = candidate.total_votos_cargo
     ? (candidate.total_votos / candidate.total_votos_cargo) * 100
     : 0
+  const photoPath = candidatePhotoById.get(candidate.candidato_id)
 
   return (
     <Card size="sm" className="gap-3 px-3 py-3 sm:px-4">
       <div className="flex min-w-0 items-center gap-3">
-        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-muted text-muted-foreground sm:size-11">
-          <UserRound className="size-5" aria-hidden="true" />
+        <div className="relative size-10 shrink-0 overflow-hidden rounded-full bg-muted sm:size-11">
+          {photoPath && (
+            <Image
+              src={photoPath}
+              alt={`Foto de ${candidate.nome_urna_candidato}`}
+              fill
+              sizes="44px"
+              className="object-cover object-center"
+            />
+          )}
         </div>
 
         <div className="min-w-0 flex-1">
