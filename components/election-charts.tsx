@@ -119,6 +119,7 @@ export function ElectionCharts({ votes, isLoading }: ElectionChartsProps) {
         item.posicao <= officeLimits[officeCode]
     )) {
       row[`candidato${vote.posicao}`] = vote.total_votos
+      row[`candidato${vote.posicao}Nome`] = vote.nome_urna_candidato
     }
 
     return row
@@ -174,10 +175,10 @@ export function ElectionCharts({ votes, isLoading }: ElectionChartsProps) {
                 content={
                   <ChartTooltipContent
                     indicator="dashed"
-                    formatter={(value, name) => (
+                    formatter={(value, name, item) => (
                       <div className="flex min-w-36 items-center justify-between gap-4">
                         <span className="text-muted-foreground">
-                          {chartConfig[name as keyof typeof chartConfig]?.label}
+                          {item.payload?.[`${name}Nome`]}
                         </span>
                         <span className="font-mono font-medium tabular-nums">
                           {Number(value).toLocaleString("pt-BR")}
