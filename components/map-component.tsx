@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useMemo, useRef, useState } from "react"
 import { Building2, MapPin, Navigation, Users, X } from "lucide-react"
 import { useQuery } from "@tanstack/react-query"
@@ -21,6 +22,7 @@ import {
   type MapRef,
 } from "@/components/ui/map"
 import { Skeleton } from "@/components/ui/skeleton"
+import { candidates as candidateCatalog } from "@/lib/data/candidate"
 import { type VotationLocation } from "@/lib/data/votation-location"
 import { fetchVotesByLocation } from "@/lib/api/votes"
 import type { RankingVote } from "@/lib/types/vote"
@@ -34,6 +36,7 @@ type RankingEntry = {
   candidateId: number
   name: string
   party: string
+  photoPath?: string
   votes: number
   percentage: number
 }
@@ -57,6 +60,9 @@ const cities = [
 ]
 
 const numberFormatter = new Intl.NumberFormat("pt-BR")
+const candidatePhotoById = new Map(
+  candidateCatalog.map((candidate) => [candidate.id, candidate.pathName])
+)
 
 function groupVotesByOffice(votes: RankingVote[]): OfficeRanking[] {
   const rankings = new Map<string, OfficeRanking>()
@@ -71,6 +77,7 @@ function groupVotesByOffice(votes: RankingVote[]): OfficeRanking[] {
       candidateId: vote.candidato_id,
       name: vote.nome_urna_candidato,
       party: vote.nome_partido,
+      photoPath: candidatePhotoById.get(vote.candidato_id),
       votes: vote.total_votos,
       percentage: vote.total_votos_cargo
         ? (vote.total_votos / vote.total_votos_cargo) * 100
@@ -330,7 +337,7 @@ function LocationResults({
                   {ranking.entries.map((entry, index) => (
                     <li
                       key={entry.candidateId}
-                      className="grid grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-2 px-3 py-2.5"
+                      className="grid grid-cols-[1.5rem_2rem_minmax(0,1fr)_auto] items-center gap-2 px-3 py-2.5"
                     >
                       <span
                         className={cn(
@@ -342,6 +349,17 @@ function LocationResults({
                       >
                         {index + 1}
                       </span>
+                      <div className="relative size-8 overflow-hidden rounded-full bg-muted">
+                        {entry.photoPath && (
+                          <Image
+                            src={entry.photoPath}
+                            alt={`Foto de ${entry.name}`}
+                            fill
+                            sizes="32px"
+                            className="object-cover object-center"
+                          />
+                        )}
+                      </div>
                       <div className="min-w-0">
                         <p className="truncate text-sm font-medium">
                           {entry.name}
@@ -380,9 +398,10 @@ function LocationResultsSkeleton() {
             {Array.from({ length: 3 }, (_, candidateIndex) => (
               <div
                 key={candidateIndex}
-                className="grid grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-2 px-3 py-2.5"
+                className="grid grid-cols-[1.5rem_2rem_minmax(0,1fr)_auto] items-center gap-2 px-3 py-2.5"
               >
                 <Skeleton className="size-6 rounded-full" />
+                <Skeleton className="size-8 rounded-full" />
                 <div className="space-y-2">
                   <Skeleton className="h-3.5 w-2/3" />
                   <Skeleton className="h-3 w-1/3" />
