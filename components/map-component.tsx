@@ -4,7 +4,9 @@ import Image from "next/image"
 import { useMemo, useRef, useState } from "react"
 import { Building2, MapPin, Navigation, Users, X } from "lucide-react"
 import { useQuery } from "@tanstack/react-query"
+import { motion } from "motion/react"
 
+import { AnimatedRanking } from "@/components/animated-ranking"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -168,6 +170,7 @@ export function CustomMap({ votationLocations }: CustomMapProps) {
               aria-busy={isInitialLocationLoading}
             >
               <LocationResults
+                key={selectedLocation.id}
                 location={selectedLocation}
                 rankings={rankings}
                 totalVotes={votesQuery.data?.total_geral_votos ?? 0}
@@ -304,7 +307,10 @@ function LocationResults({
         </div>
       </div>
 
-      <div className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-5">
+      <motion.div
+        layoutScroll
+        className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-5"
+      >
         <div className="mb-4 flex items-center justify-between gap-3">
           <div>
             <h4 className="font-semibold">Ranking de votos</h4>
@@ -333,12 +339,14 @@ function LocationResults({
               >
                 <h5 className="mb-2 text-sm font-semibold">{ranking.office}</h5>
 
-                <ol className="divide-y rounded-lg border">
-                  {ranking.entries.map((entry, index) => (
-                    <li
-                      key={entry.candidateId}
-                      className="grid grid-cols-[1.5rem_2rem_minmax(0,1fr)_auto] items-center gap-2 px-3 py-2.5"
-                    >
+                <AnimatedRanking
+                  items={ranking.entries}
+                  getKey={(entry) => entry.candidateId}
+                  label={`Ranking para ${ranking.office}`}
+                  className="overflow-hidden rounded-lg border"
+                  itemClassName="grid grid-cols-[1.5rem_2rem_minmax(0,1fr)_auto] items-center gap-2 border-b bg-background px-3 py-2.5 last:border-b-0"
+                  renderItem={(entry, index) => (
+                    <>
                       <span
                         className={cn(
                           "flex size-6 items-center justify-center rounded-full text-xs font-semibold",
@@ -376,14 +384,14 @@ function LocationResults({
                           {entry.percentage.toFixed(1).replace(".", ",")}%
                         </p>
                       </div>
-                    </li>
-                  ))}
-                </ol>
+                    </>
+                  )}
+                />
               </section>
             ))}
           </div>
         )}
-      </div>
+      </motion.div>
     </>
   )
 }
