@@ -17,59 +17,24 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+import type { RankingVote } from "@/lib/types/vote"
 
-const chartData = [
-  {
-    cargo: "Presidente",
-    candidato1: 246420,
-    candidato2: 277185,
-    candidato3: 112640,
-  },
-  {
-    cargo: "Governador",
-    candidato1: 248730,
-    candidato2: 194550,
-    candidato3: 98210,
-  },
-  {
-    cargo: "Dep. Federal",
-    candidato1: 168920,
-    candidato2: 124310,
-    candidato3: 91870,
-    candidato4: 91870,
-    candidato5: 91870,
-  },
-  {
-    cargo: "Dep. Estadual",
-    candidato1: 142680,
-    candidato2: 108240,
-    candidato3: 81950,
-    candidato4: 81950,
-    candidato5: 81950,
-  },
-  {
-    cargo: "Senador",
-    candidato1: 201840,
-    candidato2: 173760,
-    candidato3: 112980,
-    candidato4: 112980,
-    candidato5: 112980,
-  },
-]
+const officeOrder = ["1", "3", "6", "7", "5"]
+
+const officeLabels: Record<string, string> = {
+  "1": "Presidente",
+  "3": "Governador",
+  "5": "Senador",
+  "6": "Dep. Federal",
+  "7": "Dep. Estadual",
+}
 
 const chartConfig = {
-  candidato1: {
-    label: "Candidato 1",
-    color: "var(--chart-1)",
-  },
-  candidato2: {
-    label: "Candidato 2",
-    color: "var(--chart-2)",
-  },
-  candidato3: {
-    label: "Candidato 3",
-    color: "var(--chart-3)",
-  },
+  candidato1: { label: "1º colocado", color: "var(--chart-1)" },
+  candidato2: { label: "2º colocado", color: "var(--chart-2)" },
+  candidato3: { label: "3º colocado", color: "var(--chart-3)" },
+  candidato4: { label: "4º colocado", color: "var(--chart-4)" },
+  candidato5: { label: "5º colocado", color: "var(--chart-5)" },
 } satisfies ChartConfig
 
 const compactNumberFormatter = new Intl.NumberFormat("pt-BR", {
@@ -77,13 +42,39 @@ const compactNumberFormatter = new Intl.NumberFormat("pt-BR", {
   maximumFractionDigits: 1,
 })
 
-export function ElectionCharts() {
+type ChartRow = {
+  cargo: string
+  [key: string]: string | number
+}
+
+type ElectionChartsProps = {
+  votes: RankingVote[]
+  isLoading?: boolean
+}
+
+export function ElectionCharts({ votes, isLoading }: ElectionChartsProps) {
+  const chartData = officeOrder.map((officeCode) => {
+    const row: ChartRow = {
+      cargo: officeLabels[officeCode],
+    }
+
+    for (const vote of votes.filter(
+      (item) => item.codigo_cargo === officeCode && item.posicao <= 5
+    )) {
+      row[`candidato${vote.posicao}`] = vote.total_votos
+    }
+
+    return row
+  })
+
   return (
     <Card>
       <CardHeader>
         <CardTitle>Votos por cargo</CardTitle>
         <CardDescription>
-          Comparativo dos três candidatos mais votados em cada cargo
+          {isLoading
+            ? "Carregando votos do banco de dados…"
+            : "Comparativo dos cinco candidatos mais votados em cada cargo"}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -130,21 +121,14 @@ export function ElectionCharts() {
               }
             />
             <ChartLegend content={<ChartLegendContent />} />
-            <Bar
-              dataKey="candidato1"
-              fill="var(--color-candidato1)"
-              radius={4}
-            />
-            <Bar
-              dataKey="candidato2"
-              fill="var(--color-candidato2)"
-              radius={4}
-            />
-            <Bar
-              dataKey="candidato3"
-              fill="var(--color-candidato3)"
-              radius={4}
-            />
+            {Object.keys(chartConfig).map((candidateKey) => (
+              <Bar
+                key={candidateKey}
+                dataKey={candidateKey}
+                fill={`var(--color-${candidateKey})`}
+                radius={4}
+              />
+            ))}
           </BarChart>
         </ChartContainer>
       </CardContent>

@@ -9,11 +9,11 @@ export interface RankingCandidato {
   codigo_cargo: string
   nome_cargo: string
   total_votos: bigint
+  total_votos_cargo: bigint
   posicao: bigint
 }
 
 export class VotacaoRepository {
-
   async findAll(): Promise<RankingCandidato[]> {
     return prisma.$queryRaw<RankingCandidato[]>`
 
@@ -51,6 +51,9 @@ export class VotacaoRepository {
 
         SELECT
           *,
+          (SUM(total_votos) OVER (
+            PARTITION BY codigo_cargo
+          ))::bigint AS total_votos_cargo,
           ROW_NUMBER() OVER (
             PARTITION BY codigo_cargo
             ORDER BY total_votos DESC
@@ -68,6 +71,7 @@ export class VotacaoRepository {
         codigo_cargo,
         nome_cargo,
         total_votos,
+        total_votos_cargo,
         posicao
 
       FROM ranking
@@ -95,7 +99,7 @@ export class VotacaoRepository {
     `
   }
 
-  async findByLocal(codigoLocal: string): Promise<RankingCandidato[]> {
+  async findByLocal(localId: number): Promise<RankingCandidato[]> {
     return prisma.$queryRaw<RankingCandidato[]>`
 
       WITH votos_por_candidato AS (
@@ -121,7 +125,7 @@ export class VotacaoRepository {
         INNER JOIN local_votacao lv
           ON lv.id = v.fk_idlocal_votacao
 
-        WHERE lv.codigo_local = ${codigoLocal}
+        WHERE lv.id = ${localId}
 
         GROUP BY
           c.id,
@@ -137,6 +141,9 @@ export class VotacaoRepository {
 
         SELECT
           *,
+          (SUM(total_votos) OVER (
+            PARTITION BY codigo_cargo
+          ))::bigint AS total_votos_cargo,
           ROW_NUMBER() OVER (
             PARTITION BY codigo_cargo
             ORDER BY total_votos DESC
@@ -154,6 +161,7 @@ export class VotacaoRepository {
         codigo_cargo,
         nome_cargo,
         total_votos,
+        total_votos_cargo,
         posicao
 
       FROM ranking

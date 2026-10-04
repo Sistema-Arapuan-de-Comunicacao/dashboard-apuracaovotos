@@ -1,6 +1,11 @@
+"use client"
+
 import { UserRound } from "lucide-react"
+import Image from "next/image"
+import { useQuery } from "@tanstack/react-query"
 
 import { ElectionCharts } from "@/components/election-charts"
+import { CustomMap } from "@/components/map-component"
 import {
   Card,
   CardContent,
@@ -8,31 +13,42 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { votationLocations } from "@/lib/data/votation-location"
 import {
   Progress,
   ProgressLabel,
   ProgressValue,
 } from "@/components/ui/progress"
-import { type Candidate, candidates } from "@/lib/data/candidate"
-import Image from "next/image"
-import { CustomMap } from "@/components/map-component"
+import { fetchAllVotes } from "@/lib/api/votes"
+import { votationLocations } from "@/lib/data/votation-location"
+import type { RankingVote } from "@/lib/types/vote"
 
-type Office = {
-  title: string;
-  candidates: Candidate[];
-  size: "lg" | "sm";
+type OfficeConfig = {
+  code: string
+  title: string
+  limit: number
+  size: "lg" | "sm"
 }
 
-const offices: Office[] = [
-  { title: "Presidente", candidates: candidates.slice(0, 3), size: "lg" },
-  { title: "Governador", candidates: candidates.slice(0, 3), size: "lg" },
-  { title: "Deputado Federal", candidates: candidates.slice(0, 5), size: "sm" },
-  { title: "Deputado Estadual", candidates: candidates.slice(0, 5), size: "sm" },
-  { title: "Senador", candidates: candidates.slice(0, 5), size: "sm" },
+const offices: OfficeConfig[] = [
+  { code: "1", title: "Presidente", limit: 3, size: "lg" },
+  { code: "3", title: "Governador", limit: 3, size: "lg" },
+  { code: "6", title: "Deputado Federal", limit: 5, size: "sm" },
+  { code: "7", title: "Deputado Estadual", limit: 5, size: "sm" },
+  { code: "5", title: "Senador", limit: 5, size: "sm" },
 ]
 
+const numberFormatter = new Intl.NumberFormat("pt-BR")
+
 export default function Page() {
+  const votesQuery = useQuery({
+    queryKey: ["votes", "all"],
+    queryFn: fetchAllVotes,
+    refetchInterval: 1_500,
+    refetchIntervalInBackground: true,
+  })
+
+  const votes = votesQuery.data ?? []
+
   return (
     <>
       <header
@@ -57,27 +73,55 @@ export default function Page() {
         <section
           className="grid w-full gap-5 md:grid-cols-2 xl:grid-cols-6"
           aria-label="Resultados por cargo"
+          aria-busy={votesQuery.isPending}
         >
-          {offices.map((office, index) => (
-            <Card
-              key={office.title}
-              className={index < 2 ? "xl:col-span-3" : "xl:col-span-2"}
-            >
+          {votesQuery.isError && votes.length === 0 ? (
+            <Card className="md:col-span-2 xl:col-span-6">
               <CardHeader>
-                <CardTitle>{office.title}</CardTitle>
-                <CardDescription>Resultados parciais</CardDescription>
+                <CardTitle>Resultados indisponíveis</CardTitle>
+                <CardDescription>
+                  {votesQuery.error.message} Uma nova tentativa será feita
+                  automaticamente.
+                </CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col gap-2.5">
-                {office.candidates.map((candidate) => (
-                  <CandidateCard key={candidate.id} candidate={candidate} size={office.size} />
-                ))}
-              </CardContent>
             </Card>
-          ))}
+          ) : (
+            offices.map((office, index) => {
+              const candidates = votes
+                .filter((vote) => vote.codigo_cargo === office.code)
+                .slice(0, office.limit)
+
+              return (
+                <Card
+                  key={office.code}
+                  className={index < 2 ? "xl:col-span-3" : "xl:col-span-2"}
+                >
+                  <CardHeader>
+                    <CardTitle>{office.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex flex-col gap-2.5">
+                    {candidates.map((candidate) => (
+                      <CandidateCard
+                        key={candidate.candidato_id}
+                        candidate={candidate}
+                        size={office.size}
+                      />
+                    ))}
+
+                    {!votesQuery.isPending && candidates.length === 0 && (
+                      <p className="py-4 text-sm text-muted-foreground">
+                        Nenhum voto contabilizado para este cargo.
+                      </p>
+                    )}
+                  </CardContent>
+                </Card>
+              )
+            })
+          )}
         </section>
 
         <section className="w-full" aria-label="Gráficos da apuração">
-          <ElectionCharts />
+          <ElectionCharts votes={votes} isLoading={votesQuery.isPending} />
         </section>
 
         <section className="w-full" aria-label="Locais de votação">
@@ -89,13 +133,15 @@ export default function Page() {
 }
 
 type CandidateCardProps = {
-  candidate: Candidate;
-  size: "lg" | "sm";
+  candidate: RankingVote
+  size: "lg" | "sm"
 }
 
-function CandidateCard({
-  candidate: { nomeUrnaCandidato, nomePartido, numeroCandidato },
-}: CandidateCardProps) {
+function CandidateCard({ candidate, size }: CandidateCardProps) {
+  const percentage = candidate.total_votos_cargo
+    ? (candidate.total_votos / candidate.total_votos_cargo) * 100
+    : 0
+
   return (
     <Card size="sm" className="gap-3 px-3 py-3 sm:px-4">
       <div className="flex min-w-0 items-center gap-3">
@@ -104,16 +150,28 @@ function CandidateCard({
         </div>
 
         <div className="min-w-0 flex-1">
-          <CardTitle className="truncate">{nomeUrnaCandidato}</CardTitle>
+          <CardTitle className="truncate">
+            {candidate.nome_urna_candidato}
+          </CardTitle>
           <CardDescription className="truncate">
-            {nomePartido} • {numeroCandidato}
+            {candidate.nome_partido} • {candidate.numero_candidato}
           </CardDescription>
         </div>
+
+        <span
+          className={
+            size === "lg"
+              ? "text-base font-semibold tabular-nums sm:text-lg"
+              : "text-sm font-semibold tabular-nums"
+          }
+        >
+          {numberFormatter.format(candidate.total_votos)}
+        </span>
       </div>
 
-      <Progress value={56} className="w-full gap-2">
+      <Progress value={percentage} className="w-full gap-2">
         <ProgressLabel className="text-xs sm:text-sm">
-          Porcentagem de votos
+          {candidate.posicao}º lugar
         </ProgressLabel>
         <ProgressValue className="text-xs sm:text-sm" />
       </Progress>

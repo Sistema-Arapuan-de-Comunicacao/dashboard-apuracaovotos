@@ -1,26 +1,23 @@
-import { VotacaoRepository } from "../repositories/votacao-repository";
-
+import { VotacaoRepository } from "../repositories/votacao-repository"
 
 export class VotacaoService {
-  constructor(
-    private readonly votacaoRepository: VotacaoRepository,
-  ) {}
+  constructor(private readonly votacaoRepository: VotacaoRepository) {}
 
   async findAll() {
-    return this.votacaoRepository.findAll();
+    return this.votacaoRepository.findAll()
   }
 
-  async findByLocation(codigo_local: string) {
-    return this.votacaoRepository.findByLocal(codigo_local);
+  async findByLocation(localId: number) {
+    return this.votacaoRepository.findByLocal(localId)
   }
 
   async findById(id: string) {
-    const votacao = await this.votacaoRepository.findById(Number(id));
+    const votacao = await this.votacaoRepository.findById(Number(id))
 
     if (!votacao) {
-      throw new Error("Votação not found");
+      throw new Error("Votação not found")
     }
 
-    return votacao;
+    return votacao
   }
 }

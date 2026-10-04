@@ -2,6 +2,7 @@
 
 import { useMemo, useRef, useState } from "react"
 import { Building2, MapPin, Navigation, Users, X } from "lucide-react"
+import { useQuery } from "@tanstack/react-query"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -12,7 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import {
-  Map,
+  Map as ElectionMap,
   MapControls,
   MapMarker,
   MarkerContent,
@@ -20,6 +21,8 @@ import {
   type MapRef,
 } from "@/components/ui/map"
 import { type VotationLocation } from "@/lib/data/votation-location"
+import { fetchVotesByLocation } from "@/lib/api/votes"
+import type { RankingVote } from "@/lib/types/vote"
 import { cn } from "@/lib/utils"
 
 type CustomMapProps = {
@@ -27,6 +30,7 @@ type CustomMapProps = {
 }
 
 type RankingEntry = {
+  candidateId: number
   name: string
   party: string
   votes: number
@@ -51,96 +55,50 @@ const cities = [
   },
 ]
 
-const officeCandidates = [
-  {
-    office: "Presidente",
-    limit: 3,
-    candidates: [
-      ["Marina Andrade", "PDB"],
-      ["Carlos Nogueira", "UPN"],
-      ["Rafael Martins", "FBR"],
-    ],
-  },
-  {
-    office: "Senador",
-    limit: 3,
-    candidates: [
-      ["Lívia Monteiro", "PDB"],
-      ["Augusto Lima", "UPN"],
-      ["Teresa Farias", "MVP"],
-    ],
-  },
-  {
-    office: "Governador",
-    limit: 5,
-    candidates: [
-      ["Eduardo Ribeiro", "FBR"],
-      ["Sofia Cavalcanti", "PDB"],
-      ["André Bezerra", "UPN"],
-      ["Helena Torres", "MVP"],
-      ["Paulo Vasconcelos", "PRS"],
-    ],
-  },
-  {
-    office: "Deputado Federal",
-    limit: 5,
-    candidates: [
-      ["Clara Menezes", "PDB"],
-      ["João Azevedo", "UPN"],
-      ["Bruno Dantas", "FBR"],
-      ["Ana Lins", "MVP"],
-      ["Felipe Moura", "PRS"],
-    ],
-  },
-  {
-    office: "Deputado Estadual",
-    limit: 5,
-    candidates: [
-      ["Camila Freire", "UPN"],
-      ["Lucas Tavares", "PDB"],
-      ["Beatriz Melo", "FBR"],
-      ["Diego Pessoa", "PRS"],
-      ["Renata Queiroz", "MVP"],
-    ],
-  },
-] as const
-
 const numberFormatter = new Intl.NumberFormat("pt-BR")
 
-function getMockRankings(location: VotationLocation): OfficeRanking[] {
-  const seed = location.id
-  const estimatedValidVotes = Math.round(
-    location.totalEleitores * (0.7 + (seed % 13) / 100)
-  )
-  const baseShares = [0.36, 0.27, 0.18, 0.1, 0.05]
+function groupVotesByOffice(votes: RankingVote[]): OfficeRanking[] {
+  const rankings = new Map<string, OfficeRanking>()
 
-  return officeCandidates.map(({ office, limit, candidates }, officeIndex) => {
-    const entries = candidates.slice(0, limit).map(([name, party], index) => {
-      const variation =
-        (((seed * (index + 3) + officeIndex * 11) % 9) - 4) / 100
-      const share = Math.max(baseShares[index] + variation, 0.03)
-      const votes = Math.round(estimatedValidVotes * share)
+  for (const vote of votes) {
+    const ranking = rankings.get(vote.codigo_cargo) ?? {
+      office: vote.nome_cargo,
+      entries: [],
+    }
 
-      return {
-        name,
-        party,
-        votes,
-        percentage: (votes / estimatedValidVotes) * 100,
-      }
+    ranking.entries.push({
+      candidateId: vote.candidato_id,
+      name: vote.nome_urna_candidato,
+      party: vote.nome_partido,
+      votes: vote.total_votos,
+      percentage: vote.total_votos_cargo
+        ? (vote.total_votos / vote.total_votos_cargo) * 100
+        : 0,
     })
 
-    return { office, entries: entries.sort((a, b) => b.votes - a.votes) }
-  })
+    rankings.set(vote.codigo_cargo, ranking)
+  }
+
+  return Array.from(rankings.values())
 }
 
 export function CustomMap({ votationLocations }: CustomMapProps) {
   const mapRef = useRef<MapRef>(null)
   const [selectedLocation, setSelectedLocation] =
     useState<VotationLocation | null>(null)
+  const selectedLocationId = selectedLocation?.id
+
+  const votesQuery = useQuery({
+    queryKey: ["votes", "location", selectedLocationId],
+    queryFn: () => fetchVotesByLocation(selectedLocationId!),
+    enabled: selectedLocationId !== undefined,
+    refetchInterval: selectedLocationId === undefined ? false : 1_500,
+    refetchIntervalInBackground: true,
+  })
 
   const rankings = useMemo(
-    () => (selectedLocation ? getMockRankings(selectedLocation) : []),
-    [selectedLocation]
+    () => groupVotesByOffice(votesQuery.data?.votos ?? []),
+    [votesQuery.data]
   )
 
   function resizeAndFlyTo(center: [number, number], zoom: number) {
@@ -201,13 +159,21 @@ export function CustomMap({ votationLocations }: CustomMapProps) {
               <LocationResults
                 location={selectedLocation}
                 rankings={rankings}
+                totalVotes={votesQuery.data?.total_geral_votos ?? 0}
+                isLoading={votesQuery.isPending}
+                isFetching={votesQuery.isFetching}
+                error={votesQuery.error}
                 onClose={closeDetails}
               />
             </aside>
           )}
 
           <div key="map" className="relative min-h-0 min-w-0 flex-1">
-            <Map ref={mapRef} center={[-34.8990014, -7.1069417]} zoom={11}>
+            <ElectionMap
+              ref={mapRef}
+              center={[-34.8990014, -7.1069417]}
+              zoom={11}
+            >
               <MapControls position="bottom-right" showZoom />
 
               {votationLocations.map((location) => {
@@ -237,7 +203,7 @@ export function CustomMap({ votationLocations }: CustomMapProps) {
                   </MapMarker>
                 )
               })}
-            </Map>
+            </ElectionMap>
 
             {!selectedLocation && (
               <div className="pointer-events-none absolute bottom-4 left-1/2 z-10 -translate-x-1/2">
@@ -257,12 +223,19 @@ export function CustomMap({ votationLocations }: CustomMapProps) {
 type LocationResultsProps = {
   location: VotationLocation
   rankings: OfficeRanking[]
+  totalVotes: number
+  isLoading: boolean
+  isFetching: boolean
+  error: Error | null
   onClose: () => void
 }
 
 function LocationResults({
   location,
   rankings,
+  totalVotes,
+  isLoading,
+  error,
   onClose,
 }: LocationResultsProps) {
   return (
@@ -293,7 +266,7 @@ function LocationResults({
           </Button>
         </div>
 
-        <div className="mt-4 grid grid-cols-2 gap-2 text-sm">
+        <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
           <div className="rounded-lg bg-muted/60 p-3">
             <div className="flex items-center gap-1.5 text-muted-foreground">
               <Users className="size-4" aria-hidden="true" />
@@ -309,6 +282,12 @@ function LocationResults({
               {location.secoesPrincipais.length}
             </p>
           </div>
+          <div className="rounded-lg bg-muted/60 p-3">
+            <p className="text-muted-foreground">Votos apurados</p>
+            <p className="mt-1 font-semibold tabular-nums">
+              {numberFormatter.format(totalVotes)}
+            </p>
+          </div>
         </div>
       </div>
 
@@ -320,57 +299,68 @@ function LocationResults({
               Apuração por cargo neste local
             </p>
           </div>
-          <span className="rounded-full bg-secondary px-2.5 py-1 text-xs font-medium whitespace-nowrap text-secondary-foreground">
-            Dados simulados
-          </span>
         </div>
 
-        <div className="space-y-5">
-          {rankings.map((ranking) => (
-            <section
-              key={ranking.office}
-              aria-label={`Ranking para ${ranking.office}`}
-            >
-              <h5 className="mb-2 text-sm font-semibold">{ranking.office}</h5>
+        {error && rankings.length === 0 ? (
+          <p className="rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-sm text-destructive">
+            {error.message} Uma nova tentativa será feita automaticamente.
+          </p>
+        ) : isLoading ? (
+          <p className="rounded-lg border p-3 text-sm text-muted-foreground">
+            Consultando os votos deste local…
+          </p>
+        ) : rankings.length === 0 ? (
+          <p className="rounded-lg border p-3 text-sm text-muted-foreground">
+            Ainda não há votos contabilizados neste local.
+          </p>
+        ) : (
+          <div className="space-y-5">
+            {rankings.map((ranking) => (
+              <section
+                key={ranking.office}
+                aria-label={`Ranking para ${ranking.office}`}
+              >
+                <h5 className="mb-2 text-sm font-semibold">{ranking.office}</h5>
 
-              <ol className="divide-y rounded-lg border">
-                {ranking.entries.map((entry, index) => (
-                  <li
-                    key={`${ranking.office}-${entry.name}`}
-                    className="grid grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-2 px-3 py-2.5"
-                  >
-                    <span
-                      className={cn(
-                        "flex size-6 items-center justify-center rounded-full text-xs font-semibold",
-                        index === 0
-                          ? "bg-primary text-primary-foreground"
-                          : "bg-muted text-muted-foreground"
-                      )}
+                <ol className="divide-y rounded-lg border">
+                  {ranking.entries.map((entry, index) => (
+                    <li
+                      key={entry.candidateId}
+                      className="grid grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-2 px-3 py-2.5"
                     >
-                      {index + 1}
-                    </span>
-                    <div className="min-w-0">
-                      <p className="truncate text-sm font-medium">
-                        {entry.name}
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        {entry.party}
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-sm font-semibold tabular-nums">
-                        {numberFormatter.format(entry.votes)}
-                      </p>
-                      <p className="flex items-center justify-end text-xs text-muted-foreground tabular-nums">
-                        {entry.percentage.toFixed(1).replace(".", ",")}%
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </section>
-          ))}
-        </div>
+                      <span
+                        className={cn(
+                          "flex size-6 items-center justify-center rounded-full text-xs font-semibold",
+                          index === 0
+                            ? "bg-primary text-primary-foreground"
+                            : "bg-muted text-muted-foreground"
+                        )}
+                      >
+                        {index + 1}
+                      </span>
+                      <div className="min-w-0">
+                        <p className="truncate text-sm font-medium">
+                          {entry.name}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {entry.party}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-sm font-semibold tabular-nums">
+                          {numberFormatter.format(entry.votes)}
+                        </p>
+                        <p className="flex items-center justify-end text-xs text-muted-foreground tabular-nums">
+                          {entry.percentage.toFixed(1).replace(".", ",")}%
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            ))}
+          </div>
+        )}
       </div>
     </>
   )
