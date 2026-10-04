@@ -20,6 +20,7 @@ import {
   MarkerTooltip,
   type MapRef,
 } from "@/components/ui/map"
+import { Skeleton } from "@/components/ui/skeleton"
 import { type VotationLocation } from "@/lib/data/votation-location"
 import { fetchVotesByLocation } from "@/lib/api/votes"
 import type { RankingVote } from "@/lib/types/vote"
@@ -95,6 +96,8 @@ export function CustomMap({ votationLocations }: CustomMapProps) {
     refetchInterval: selectedLocationId === undefined ? false : 1_500,
     refetchIntervalInBackground: true,
   })
+  const isInitialLocationLoading =
+    votesQuery.isPending && votesQuery.data === undefined
 
   const rankings = useMemo(
     () => groupVotesByOffice(votesQuery.data?.votos ?? []),
@@ -155,13 +158,13 @@ export function CustomMap({ votationLocations }: CustomMapProps) {
               key="details"
               className="flex h-[55%] min-h-0 w-full shrink-0 flex-col border-b bg-background lg:h-full lg:min-w-1/2 lg:basis-1/2 lg:border-r lg:border-b-0"
               aria-label={`Resultados de ${selectedLocation.localVotacao}`}
+              aria-busy={isInitialLocationLoading}
             >
               <LocationResults
                 location={selectedLocation}
                 rankings={rankings}
                 totalVotes={votesQuery.data?.total_geral_votos ?? 0}
-                isLoading={votesQuery.isPending}
-                isFetching={votesQuery.isFetching}
+                isLoading={isInitialLocationLoading}
                 error={votesQuery.error}
                 onClose={closeDetails}
               />
@@ -225,7 +228,6 @@ type LocationResultsProps = {
   rankings: OfficeRanking[]
   totalVotes: number
   isLoading: boolean
-  isFetching: boolean
   error: Error | null
   onClose: () => void
 }
@@ -285,7 +287,11 @@ function LocationResults({
           <div className="rounded-lg bg-muted/60 p-3">
             <p className="text-muted-foreground">Votos apurados</p>
             <p className="mt-1 font-semibold tabular-nums">
-              {numberFormatter.format(totalVotes)}
+              {isLoading ? (
+                <Skeleton className="h-5 w-16" aria-hidden="true" />
+              ) : (
+                numberFormatter.format(totalVotes)
+              )}
             </p>
           </div>
         </div>
@@ -306,9 +312,7 @@ function LocationResults({
             {error.message} Uma nova tentativa será feita automaticamente.
           </p>
         ) : isLoading ? (
-          <p className="rounded-lg border p-3 text-sm text-muted-foreground">
-            Consultando os votos deste local…
-          </p>
+          <LocationResultsSkeleton />
         ) : rankings.length === 0 ? (
           <p className="rounded-lg border p-3 text-sm text-muted-foreground">
             Ainda não há votos contabilizados neste local.
@@ -363,5 +367,35 @@ function LocationResults({
         )}
       </div>
     </>
+  )
+}
+
+function LocationResultsSkeleton() {
+  return (
+    <div className="space-y-5" aria-hidden="true">
+      {Array.from({ length: 3 }, (_, officeIndex) => (
+        <section key={officeIndex}>
+          <Skeleton className="mb-2 h-4 w-28" />
+          <div className="divide-y rounded-lg border">
+            {Array.from({ length: 3 }, (_, candidateIndex) => (
+              <div
+                key={candidateIndex}
+                className="grid grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-2 px-3 py-2.5"
+              >
+                <Skeleton className="size-6 rounded-full" />
+                <div className="space-y-2">
+                  <Skeleton className="h-3.5 w-2/3" />
+                  <Skeleton className="h-3 w-1/3" />
+                </div>
+                <div className="space-y-2">
+                  <Skeleton className="h-3.5 w-12" />
+                  <Skeleton className="ml-auto h-3 w-9" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
   )
 }

@@ -17,6 +17,7 @@ import {
   ProgressLabel,
   ProgressValue,
 } from "@/components/ui/progress"
+import { Skeleton } from "@/components/ui/skeleton"
 import { fetchAllVotes } from "@/lib/api/votes"
 import { candidates as candidateCatalog } from "@/lib/data/candidate"
 import { votationLocations } from "@/lib/data/votation-location"
@@ -39,7 +40,7 @@ const offices: OfficeConfig[] = [
 
 const numberFormatter = new Intl.NumberFormat("pt-BR")
 const candidatePhotoById = new Map(
-  candidateCatalog.map((candidate) => [candidate.id, candidate.pathName]),
+  candidateCatalog.map((candidate) => [candidate.id, candidate.pathName])
 )
 
 export default function Page() {
@@ -100,18 +101,24 @@ export default function Page() {
                   className={index < 2 ? "xl:col-span-3" : "xl:col-span-2"}
                 >
                   <CardHeader>
-                    <CardTitle className={index < 2 ? "text-center" : undefined}>
+                    <CardTitle
+                      className={index < 2 ? "text-center" : undefined}
+                    >
                       {office.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex flex-col gap-2.5">
-                    {candidates.map((candidate) => (
-                      <CandidateCard
-                        key={candidate.candidato_id}
-                        candidate={candidate}
-                        size={office.size}
-                      />
-                    ))}
+                    {votesQuery.isPending
+                      ? Array.from({ length: office.limit }, (_, position) => (
+                          <CandidateCardSkeleton key={position} />
+                        ))
+                      : candidates.map((candidate) => (
+                          <CandidateCard
+                            key={candidate.candidato_id}
+                            candidate={candidate}
+                            size={office.size}
+                          />
+                        ))}
 
                     {!votesQuery.isPending && candidates.length === 0 && (
                       <p className="py-4 text-sm text-muted-foreground">
@@ -125,9 +132,11 @@ export default function Page() {
           )}
         </section>
 
-        <section className="w-full" aria-label="Gráficos da apuração">
-          <ElectionCharts votes={votes} isLoading={votesQuery.isPending} />
-        </section>
+        {(!votesQuery.isError || votes.length > 0) && (
+          <section className="w-full" aria-label="Gráficos da apuração">
+            <ElectionCharts votes={votes} isLoading={votesQuery.isPending} />
+          </section>
+        )}
 
         <section className="w-full" aria-label="Locais de votação">
           <CustomMap votationLocations={votationLocations} />
@@ -140,6 +149,26 @@ export default function Page() {
 type CandidateCardProps = {
   candidate: RankingVote
   size: "lg" | "sm"
+}
+
+function CandidateCardSkeleton() {
+  return (
+    <Card size="sm" className="gap-3 px-3 py-3 sm:px-4" aria-hidden="true">
+      <div className="flex min-w-0 items-center gap-3">
+        <Skeleton className="size-10 shrink-0 rounded-full sm:size-11" />
+        <div className="min-w-0 flex-1 space-y-2">
+          <Skeleton className="h-4 w-2/3" />
+          <Skeleton className="h-3 w-1/2" />
+        </div>
+        <Skeleton className="h-5 w-14 shrink-0" />
+      </div>
+      <div className="flex items-center justify-between gap-3">
+        <Skeleton className="h-3 w-14" />
+        <Skeleton className="h-3 w-10" />
+      </div>
+      <Skeleton className="h-1 w-full" />
+    </Card>
+  )
 }
 
 function CandidateCard({ candidate, size }: CandidateCardProps) {
